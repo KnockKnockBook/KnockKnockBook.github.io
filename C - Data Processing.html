@@ -335,13 +335,23 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dfx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ignore_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Get info about your DF: Count, Sum, Unique&lt;/h3&gt;
-&lt;h6&gt;Get info about your columns and data types&lt;/h6&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dtypes&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# get the data types of each column in your DF&lt;/span&gt;
-
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# get a list of the columns in your DF&lt;/span&gt;
+&lt;h1&gt;Create a &#39;Rank&#39; column with the position of a row in the DF&lt;/h1&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# Create an index like column &amp;#39;rank&amp;#39; to use as a label for the x-axis so that your chart looks pretty&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF_Sorted&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sort_values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ascending&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF_Sorted&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;insert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;rank&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF_Sorted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h1&gt;Get information about your DataFrame&lt;/h1&gt;
+&lt;h6&gt;Get info about your columns and data types&lt;/h6&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# get the data types of each column in your DF&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dtypes&lt;/span&gt; 
+
+&lt;span class=&#34;c1&#34;&gt;# get a list of the columns in your DF&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Total Rows, total unique rows, and sum of rows&lt;/h1&gt;
+&lt;h1&gt;Get information about the total number of rows, and the total number of unique rows in a DataFrame&lt;/h1&gt;
 &lt;h6&gt;Count total Rows in DF with len(DF.index)&lt;/h6&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# get the number of rows in your DF&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Use the DF&amp;#39;s index to count the rows in the DF&lt;/span&gt;
@@ -355,7 +365,7 @@ function closeNav() {
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nunique&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Query your DFs with SQL&lt;/h3&gt;
+&lt;h1&gt;Query your DFs with SQL&lt;/h1&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandasql&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pql&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;# Write a SQL query and save it as a string&lt;/span&gt;
@@ -515,12 +525,21 @@ function closeNav() {
 <div class="codehilite"><pre><span></span><code><span class="c1"># use pd.concat() and make sure the column names are the same</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">df3</span><span class="p">,</span> <span class="n">dfx</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
-<h3>Get info about your DF: Count, Sum, Unique</h3>
-<h6>Get info about your columns and data types</h6>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="o">.</span><span class="n">dtypes</span> <span class="c1"># get the data types of each column in your DF</span>
-
-<span class="n">DF</span><span class="o">.</span><span class="n">columns</span> <span class="c1"># get a list of the columns in your DF</span>
+<h1>Create a 'Rank' column with the position of a row in the DF</h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Create an index like column 'rank' to use as a label for the x-axis so that your chart looks pretty</span>
+<span class="n">DF_Sorted</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'column_name'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">DF_Sorted</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'rank'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">DF_Sorted</span><span class="p">[</span><span class="s1">'column_name'</span><span class="p">])))</span>
 </code></pre></div>
+<h1>Get information about your DataFrame</h1>
+<h6>Get info about your columns and data types</h6>
+<div class="codehilite"><pre><span></span><code><span class="c1"># get the data types of each column in your DF</span>
+<span class="n">DF</span><span class="o">.</span><span class="n">dtypes</span> 
+
+<span class="c1"># get a list of the columns in your DF</span>
+<span class="n">DF</span><span class="o">.</span><span class="n">columns</span> 
+</code></pre></div>
+<h1>Total Rows, total unique rows, and sum of rows</h1>
+<h1>Get information about the total number of rows, and the total number of unique rows in a DataFrame</h1>
 <h6>Count total Rows in DF with len(DF.index)</h6>
 <div class="codehilite"><pre><span></span><code><span class="c1"># get the number of rows in your DF</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="c1"># Use the DF's index to count the rows in the DF</span>
@@ -531,7 +550,7 @@ function closeNav() {
 <h6>Count total unique rows in a DF with .nunique()</h6>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 </code></pre></div>
-<h3>Query your DFs with SQL</h3>
+<h1>Query your DFs with SQL</h1>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandasql</span> <span class="k">as</span> <span class="nn">pql</span>
 
 <span class="c1"># Write a SQL query and save it as a string</span>
