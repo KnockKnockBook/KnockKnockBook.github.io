@@ -210,13 +210,14 @@ function closeNav() {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1&gt;Basic Plots&lt;/h1&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;### Histogram&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# plot a basic histogram&lt;/span&gt;
+&lt;h2&gt;Histogram&lt;/h2&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;         &lt;span class=&#34;c1&#34;&gt;# plot a basic histogram&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bins&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Specify the number of bins&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h2&gt;Bar Chart&lt;/h2&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;################################################################&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Bar Chart&lt;/span&gt;
+
 &lt;span class=&#34;n&#34;&gt;DF_Grouped&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;groupby&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;labels&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_two&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 
 &lt;span class=&#34;n&#34;&gt;plot_object&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF_Grouped&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kind&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;
@@ -267,7 +268,7 @@ function closeNav() {
 
 &lt;h1&gt;Common issues with plotting&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;There are so many values in the column that my bar chart, or other plot, looks all jumbled up and it takes a long time&lt;/li&gt;
+&lt;li&gt;There are so many values in the column that my bar chart, or other plot,  looks all jumbled up and it takes a long time&lt;/li&gt;
 &lt;/ul&gt; -->
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -281,12 +282,13 @@ function closeNav() {
 <span class="n">DF</span><span class="p">[</span><span class="s1">'labels'</span><span class="p">]</span>       <span class="o">=</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'A'</span><span class="p">]</span>
 </code></pre></div>
 <h1>Basic Plots</h1>
-<div class="codehilite"><pre><span></span><code><span class="c1">### Histogram</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'column_name'</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>         <span class="c1"># plot a basic histogram</span>
+<h2>Histogram</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'column_name'</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>         <span class="c1"># plot a basic histogram</span>
 <span class="n">DF</span><span class="p">[</span><span class="s1">'column_name'</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># Specify the number of bins</span>
 </code></pre></div>
+<h2>Bar Chart</h2>
 <div class="codehilite"><pre><span></span><code><span class="c1">################################################################</span>
-<span class="c1"># Bar Chart</span>
+
 <span class="n">DF_Grouped</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'labels'</span><span class="p">])[</span><span class="s1">'column_two'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="n">plot_object</span> <span class="o">=</span> <span class="n">DF_Grouped</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span>   <span class="o">=</span> <span class="s1">'bar'</span>
@@ -335,7 +337,7 @@ function closeNav() {
 </code></pre></div>
 <h1>Common issues with plotting</h1>
 <ul>
-<li>There are so many values in the column that my bar chart, or other plot, looks all jumbled up and it takes a long time</li>
+<li>There are so many values in the column that my bar chart, or other plot,  looks all jumbled up and it takes a long time</li>
 </ul>
 </div>
 
