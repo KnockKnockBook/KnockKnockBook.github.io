@@ -263,14 +263,13 @@ function closeNav() {
 &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h1&gt;Filtering with &#39;If Then&#39; Logic&lt;/h1&gt;
+&lt;h1&gt;&#39;If Then&#39; Logic Filters&lt;/h1&gt;
 &lt;p&gt;The basic process for filtering a DF is to:
 - 1 write a true/false statement 
 - 2 use the statement to filter the DF to cases where the DF is true 
 you do this by adding the true/false statement to the DF[True_False_Statement] &lt;/p&gt;
-&lt;h3&gt;If/Then Option 1: Filter a DF using two logic statements&lt;/h3&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# Create a True/False statement for a DF column&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;h3&gt;Evaluate a True/False statement with a DF column&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;```&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; 
 &lt;span class=&#34;n&#34;&gt;Out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; 
 &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;    &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;
@@ -278,27 +277,13 @@ you do this by adding the true/false statement to the DF[True_False_Statement] &
 &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;    &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h1&gt;Adding a True/False statement to a DF column&lt;/h1&gt;
+&lt;h1&gt;Use a True/False statement to filter a DataFrame, with DF[ (your_logic) ]&lt;/h1&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;Out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;117&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; 
    &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;about&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3&gt;If/Then Option 2:  Use np.where() and one logic statement&lt;/h3&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;where&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-   &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;how&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;value_if_false&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;about&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;value_if_true&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;value_if_fals&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# np.where generates an np array which can be added as a column to a DataFrame&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dtype&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;U14&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h6&gt;Where column IS equal to a value&lt;/h6&gt;
@@ -328,17 +313,17 @@ you do this by adding the true/false statement to the DF[True_False_Statement] &
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;has_nulls&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;notnull&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h6&gt;Where multiple conditions - AND&lt;/h6&gt;
+&lt;h6&gt;Where multiple conditions are all true - AND&lt;/h6&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use &amp;#39;&amp;amp;&amp;#39; to seporate your true/false statements&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h6&gt;Where multiple conditions - OR&lt;/h6&gt;
+&lt;h6&gt;Where at least one condition is true - OR&lt;/h6&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use &amp;#39;|&amp;#39; to seporate your true/false statements&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h6&gt;Where column IN a list of values&lt;/h6&gt;
+&lt;h6&gt;Where value in column is IN a list of values&lt;/h6&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use .isin([&amp;#39;your&amp;#39;,&amp;#39;list&amp;#39;, &amp;#39;of&amp;#39;, &amp;#39;values&amp;#39;])&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# create a true/false condition using a list of values&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
@@ -353,10 +338,37 @@ you do this by adding the true/false statement to the DF[True_False_Statement] &
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1&gt;CASE WHEN logic - create new columns with logical conditions&lt;/h1&gt;
+&lt;h3&gt;Option 1: Use &#39;DF.loc&#39; and 2 logic statements&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# Create a new column where condition is true (new column will be &amp;#39;NaN&amp;#39; where it&amp;#39;s not true)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;new_column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;new_column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# Create a second statement where where condition is NOT true to update all the other values &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;new_column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;new_column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;how&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;value_if_false&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;about&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;value_if_true&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;value_if_fals&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Option 2:  Use &#39;np.where()&#39; and one logic statement&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;where&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;D&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;how&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;value_if_false&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;about&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;value_if_true&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;value_if_fals&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# np.where generates an np array which can be added as a column to a DataFrame&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dtype&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;U14&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Compare columns with logic and, if the logic is true, return the results from other columns&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# if column A = Column B return column C&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;new_column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1&gt;Append new rows to a DF&lt;/h1&gt;
@@ -521,38 +533,25 @@ you do this by adding the true/false statement to the DF[True_False_Statement] &
 <span class="mi">1</span>      <span class="mi">2</span>     <span class="n">b</span>  <span class="n">about</span>
 <span class="mi">2</span>      <span class="mi">3</span>     <span class="n">c</span>   <span class="n">that</span>
 </code></pre></div>
-<h1>Filtering with 'If Then' Logic</h1>
+<h1>'If Then' Logic Filters</h1>
 <p>The basic process for filtering a DF is to:
 - 1 write a true/false statement 
 - 2 use the statement to filter the DF to cases where the DF is true 
 you do this by adding the true/false statement to the DF[True_False_Statement] </p>
-<h3>If/Then Option 1: Filter a DF using two logic statements</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Create a True/False statement for a DF column</span>
-<span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">)</span>
+<h3>Evaluate a True/False statement with a DF column</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span>
 <span class="err">```</span><span class="n">python</span> 
 <span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
 <span class="mi">0</span>    <span class="kc">False</span>
 <span class="mi">1</span>     <span class="kc">True</span>
 <span class="mi">2</span>    <span class="kc">False</span>
 </code></pre></div>
-<h1>Adding a True/False statement to a DF column</h1>
+<h1>Use a True/False statement to filter a DataFrame, with DF[ (your_logic) ]</h1>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span> <span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">)</span> <span class="p">]</span>
 </code></pre></div>
 <div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="mi">117</span><span class="p">]:</span> 
    <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>
 <span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>
-</code></pre></div>
-<h3>If/Then Option 2:  Use np.where() and one logic statement</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span><span class="mi">2</span> <span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">)</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
-   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
-<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
-<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
-<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
-
-<span class="c1"># np.where generates an np array which can be added as a column to a DataFrame</span>
-<span class="n">array</span><span class="p">([</span><span class="s1">'value_if_false'</span><span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'&lt;U14'</span><span class="p">)</span>
 </code></pre></div>
 <h6>Where column IS equal to a value</h6>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span> <span class="p">)]</span>
@@ -575,15 +574,15 @@ you do this by adding the true/false statement to the DF[True_False_Statement] <
 <h6>Where column NOT NULL</h6>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'has_nulls'</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span> <span class="p">)]</span>
 </code></pre></div>
-<h6>Where multiple conditions - AND</h6>
+<h6>Where multiple conditions are all true - AND</h6>
 <div class="codehilite"><pre><span></span><code><span class="c1"># use '&amp;' to seporate your true/false statements</span>
 <span class="n">DF</span><span class="p">[</span> <span class="p">(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span> <span class="p">)</span>  <span class="o">&amp;</span>  <span class="p">(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">]</span>
 </code></pre></div>
-<h6>Where multiple conditions - OR</h6>
+<h6>Where at least one condition is true - OR</h6>
 <div class="codehilite"><pre><span></span><code><span class="c1"># use '|' to seporate your true/false statements</span>
 <span class="n">DF</span><span class="p">[</span> <span class="p">(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span> <span class="p">)</span>  <span class="o">|</span>  <span class="p">(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'c'</span> <span class="p">)</span> <span class="p">]</span>
 </code></pre></div>
-<h6>Where column IN a list of values</h6>
+<h6>Where value in column is IN a list of values</h6>
 <div class="codehilite"><pre><span></span><code><span class="c1"># use .isin(['your','list', 'of', 'values'])</span>
 <span class="c1"># create a true/false condition using a list of values</span>
 <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">])</span>
@@ -596,10 +595,33 @@ you do this by adding the true/false statement to the DF[True_False_Statement] <
 <span class="n">DF</span><span class="p">[</span> <span class="o">~</span><span class="p">(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">])</span> <span class="p">)</span> <span class="p">]</span>
 </code></pre></div>
 <h1>CASE WHEN logic - create new columns with logical conditions</h1>
+<h3>Option 1: Use 'DF.loc' and 2 logic statements</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Create a new column where condition is true (new column will be 'NaN' where it's not true)</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_true'</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_true'</span>
 <span class="c1"># Create a second statement where where condition is NOT true to update all the other values </span>
-<span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_false'</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_false'</span>
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
+   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
+<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
+<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
+</code></pre></div>
+<h3>Option 2:  Use 'np.where()' and one logic statement</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span><span class="mi">2</span> <span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">)</span>
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
+   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
+<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
+<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
+
+<span class="c1"># np.where generates an np array which can be added as a column to a DataFrame</span>
+<span class="n">array</span><span class="p">([</span><span class="s1">'value_if_false'</span><span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'&lt;U14'</span><span class="p">)</span>
+</code></pre></div>
+<h3>Compare columns with logic and, if the logic is true, return the results from other columns</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># if column A = Column B return column C</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'G'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'C'</span><span class="p">]</span> 
 </code></pre></div>
 <h1>Append new rows to a DF</h1>
 <h6>Add Rows to a DF with a dictionary</h6>
