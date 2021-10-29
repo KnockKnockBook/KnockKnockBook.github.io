@@ -199,6 +199,11 @@ function closeNav() {
 </div>
 <!-- Here's where the blog content will go -->
 <!--&lt;h1&gt;Data Processing&lt;/h1&gt;
+&lt;h6&gt;Libraries used here&lt;/h6&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;padas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h1&gt;Creating DataFrames&lt;/h1&gt;
 &lt;p&gt;A Dataframe is a dataset like what you might find in a csv, Excel or other tabular dataset.  &lt;/p&gt;
 &lt;h6&gt;Create DF columns with lists&lt;/h6&gt;
@@ -241,7 +246,7 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new_columns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h1&gt;Filtering with Logic&lt;/h1&gt;
+&lt;h1&gt;Filtering with if/then Logic&lt;/h1&gt;
 &lt;h6&gt;Where logic is true&lt;/h6&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# The basic process for filtering a DF is to:&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# 1 write a true/false statement &lt;/span&gt;
@@ -253,6 +258,10 @@ function closeNav() {
 
 &lt;span class=&#34;c1&#34;&gt;# adding a True/False statement to a DF column&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h6&gt;another option for If Then logic filtering is to use np.where()&lt;/h6&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;where&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_true&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;value_if_false&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h6&gt;Where column IS equal to a value&lt;/h6&gt;
@@ -409,6 +418,10 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;has_nulls&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;i am here&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# as you can see, the &amp;#39;&amp;#39; isn&amp;#39;t actually null &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; -->
 <h1>Data Processing</h1>
+<h6>Libraries used here</h6>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">padas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
 <h1>Creating DataFrames</h1>
 <p>A Dataframe is a dataset like what you might find in a csv, Excel or other tabular dataset.  </p>
 <h6>Create DF columns with lists</h6>
@@ -446,7 +459,7 @@ function closeNav() {
 
 <span class="n">DF</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span><span class="p">)</span>
 </code></pre></div>
-<h1>Filtering with Logic</h1>
+<h1>Filtering with if/then Logic</h1>
 <h6>Where logic is true</h6>
 <div class="codehilite"><pre><span></span><code><span class="c1"># The basic process for filtering a DF is to:</span>
 <span class="c1"># 1 write a true/false statement </span>
@@ -458,6 +471,9 @@ function closeNav() {
 
 <span class="c1"># adding a True/False statement to a DF column</span>
 <span class="n">DF</span><span class="p">[</span> <span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">)</span> <span class="p">]</span>
+</code></pre></div>
+<h6>another option for If Then logic filtering is to use np.where()</h6>
+<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span><span class="mi">2</span> <span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">)</span>
 </code></pre></div>
 <h6>Where column IS equal to a value</h6>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span> <span class="p">)]</span>

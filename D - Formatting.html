@@ -217,6 +217,16 @@ function closeNav() {
 &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;2021&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;21&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h3&gt;Remove the date, and just display the time with .dt.time&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;date_time_formated&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;Out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;73&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; 
+&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;35&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h3&gt;Common Format conventions&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;Code&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Example&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Y&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Full&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Year&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                     &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2021&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
@@ -323,6 +333,14 @@ function closeNav() {
 <span class="mi">0</span>   <span class="mi">2021</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">26</span> <span class="mi">13</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">00</span>
 <span class="mi">1</span>   <span class="mi">2021</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">15</span> <span class="mi">01</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">00</span>
 <span class="mi">2</span>   <span class="mi">2021</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">21</span> <span class="mi">13</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">00</span>
+</code></pre></div>
+<h3>Remove the date, and just display the time with .dt.time</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">'date_time_formated'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">time</span>
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="mi">73</span><span class="p">]:</span> 
+<span class="mi">0</span>    <span class="mi">13</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">00</span>
+<span class="mi">1</span>    <span class="mi">01</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">00</span>
+<span class="mi">2</span>    <span class="mi">13</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">00</span>
 </code></pre></div>
 <h3>Common Format conventions</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">Code</span><span class="w">  </span><span class="n">Description</span><span class="w">                   </span><span class="n">Example</span><span class="w"></span>
