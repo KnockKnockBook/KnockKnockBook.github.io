@@ -242,7 +242,7 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;DF_Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;New_Column&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF_Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;text_string&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count_total_characters&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Here is a collection of standard text processing functions&lt;/h3&gt;
+&lt;h3&gt;Here is a collection of useful text processing functions to apply to a string column&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# write a function to process the text&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# Return the length of a text column&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;count_total_characters&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
@@ -389,7 +389,7 @@ function closeNav() {
 <span class="c1"># apply the text processing function to create a new column</span>
 <span class="n">DF_Text</span><span class="p">[</span><span class="s1">'New_Column'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF_Text</span><span class="p">[</span><span class="s1">'text_string'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">count_total_characters</span><span class="p">)</span>
 </code></pre></div>
-<h3>Here is a collection of standard text processing functions</h3>
+<h3>Here is a collection of useful text processing functions to apply to a string column</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># write a function to process the text</span>
 <span class="c1"># Return the length of a text column</span>
 <span class="k">def</span> <span class="nf">count_total_characters</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>

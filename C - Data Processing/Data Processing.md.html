@@ -194,6 +194,7 @@ function closeNav() {
 <a href="/C%20-%20Data%20Processing/Data%20Processing.md.html">Data Processing.md </a>
 <a href="/C%20-%20Data%20Processing/Process%20and%20Fill%20Empty%20DF.md.html">Process and Fill Empty DF.md </a>
 <a href="/C%20-%20Data%20Processing/Join%20Stack%20Append.md.html">Join Stack Append.md </a>
+<a href="/C%20-%20Data%20Processing/Query%20DataFrames%20with%20SQL.md.html">Query DataFrames with SQL.md </a>
 </div>
 <div id="main">
 <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
@@ -219,6 +220,15 @@ function closeNav() {
 &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;how&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;about&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1&gt;Managing Columns&lt;/h1&gt;
+&lt;h3&gt;Get info about columns names and data types of columns&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# get the data types of each column in your DF&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dtypes&lt;/span&gt; 
+
+&lt;span class=&#34;c1&#34;&gt;# get a list of the columns in your DF&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1&gt;SELECT, Drop, and Rename columns&lt;/h1&gt;
@@ -376,19 +386,15 @@ function closeNav() {
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;old_val&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;new_val&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h2&gt;&lt;strong&gt;Sort&lt;/strong&gt; a DataFrame and &lt;strong&gt;ORDER BY&lt;/strong&gt; a column&lt;/h2&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use .sort_values, add your list of columns use ascending True or False&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sort_values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ascending&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h1&gt;Create a &#39;Rank&#39; column with the position of a row in the DF&lt;/h1&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# Create an index like column &amp;#39;rank&amp;#39; to use as a label for the x-axis so that your chart looks pretty&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF_Sorted&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sort_values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ascending&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF_Sorted&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;insert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;rank&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF_Sorted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1&gt;Get information about your DataFrame&lt;/h1&gt;
-&lt;h3&gt;Get info about your columns and data types&lt;/h3&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# get the data types of each column in your DF&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dtypes&lt;/span&gt; 
-
-&lt;span class=&#34;c1&#34;&gt;# get a list of the columns in your DF&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1&gt;Total Rows, total unique rows, and sum of rows&lt;/h1&gt;
@@ -398,26 +404,12 @@ function closeNav() {
 &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Use the DF&amp;#39;s index to count the rows in the DF&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2&gt;Count Non-Null rows with .count()&lt;/h2&gt;
+&lt;h2&gt;&lt;strong&gt;Count (*)&lt;/strong&gt; Get a total row count of Non-Null rows - .count()&lt;/h2&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# Count non null values&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2&gt;Count total unique rows in a DF with .nunique()&lt;/h2&gt;
+&lt;h2&gt;&lt;strong&gt;Count Distinct&lt;/strong&gt; Get total unique rows - .nunique()&lt;/h2&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nunique&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;Query your DFs with SQL&lt;/h2&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandasql&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pql&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Write a SQL query and save it as a string&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Refer to your DFs in your SQL as though they were tables&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;SELECT *&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         FROM DF&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         WHERE A = 1&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run your query and save the resulting DF to use as you see fit &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;New_DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqldf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;locals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;- [ ] GROUP BY/Pivot Tables&lt;/h2&gt;
@@ -435,11 +427,6 @@ function closeNav() {
 
 &lt;span class=&#34;c1&#34;&gt;# run your query and save the resulting DF to use as you see fit &lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;New_DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqldf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;locals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;&lt;strong&gt;Sort&lt;/strong&gt; a DataFrame and &lt;strong&gt;ORDER BY&lt;/strong&gt; a column&lt;/h2&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use .sort_values, add your list of columns use ascending T/F &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sort_values&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ascending&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5&gt;Data Types - add NULL values&lt;/h5&gt;
@@ -466,6 +453,14 @@ function closeNav() {
 <span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>
 <span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>
 <span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>
+</code></pre></div>
+<h1>Managing Columns</h1>
+<h3>Get info about columns names and data types of columns</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># get the data types of each column in your DF</span>
+<span class="n">DF</span><span class="o">.</span><span class="n">dtypes</span> 
+
+<span class="c1"># get a list of the columns in your DF</span>
+<span class="n">DF</span><span class="o">.</span><span class="n">columns</span> 
 </code></pre></div>
 <h1>SELECT, Drop, and Rename columns</h1>
 <h3><strong>SELECT</strong> specific columns in a DF</h3>
@@ -596,18 +591,14 @@ function closeNav() {
 <h2>Find and Replace</h2>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'column'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">'old_val'</span><span class="p">,</span> <span class="s1">'new_val'</span><span class="p">])</span>
 </code></pre></div>
+<h2><strong>Sort</strong> a DataFrame and <strong>ORDER BY</strong> a column</h2>
+<div class="codehilite"><pre><span></span><code><span class="c1"># use .sort_values, add your list of columns use ascending True or False</span>
+<span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 <h1>Create a 'Rank' column with the position of a row in the DF</h1>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Create an index like column 'rank' to use as a label for the x-axis so that your chart looks pretty</span>
 <span class="n">DF_Sorted</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'column_name'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">DF_Sorted</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'rank'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">DF_Sorted</span><span class="p">[</span><span class="s1">'column_name'</span><span class="p">])))</span>
-</code></pre></div>
-<h1>Get information about your DataFrame</h1>
-<h3>Get info about your columns and data types</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get the data types of each column in your DF</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">dtypes</span> 
-
-<span class="c1"># get a list of the columns in your DF</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">columns</span> 
 </code></pre></div>
 <h1>Total Rows, total unique rows, and sum of rows</h1>
 <h1>Get information about the total number of rows, and the total number of unique rows in a DataFrame</h1>
@@ -615,24 +606,11 @@ function closeNav() {
 <div class="codehilite"><pre><span></span><code><span class="c1"># get the number of rows in your DF</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="c1"># Use the DF's index to count the rows in the DF</span>
 </code></pre></div>
-<h2>Count Non-Null rows with .count()</h2>
+<h2><strong>Count (*)</strong> Get a total row count of Non-Null rows - .count()</h2>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>       <span class="c1"># Count non null values</span>
 </code></pre></div>
-<h2>Count total unique rows in a DF with .nunique()</h2>
+<h2><strong>Count Distinct</strong> Get total unique rows - .nunique()</h2>
 <div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
-</code></pre></div>
-<h2>Query your DFs with SQL</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandasql</span> <span class="k">as</span> <span class="nn">pql</span>
-
-<span class="c1"># Write a SQL query and save it as a string</span>
-<span class="c1"># Refer to your DFs in your SQL as though they were tables</span>
-<span class="n">sql</span> <span class="o">=</span> <span class="s1">'''SELECT *</span>
-<span class="s1">         FROM DF</span>
-<span class="s1">         WHERE A = 1</span>
-<span class="s1">      '''</span>
-
-<span class="c1"># run your query and save the resulting DF to use as you see fit </span>
-<span class="n">New_DF</span> <span class="o">=</span> <span class="n">pql</span><span class="o">.</span><span class="n">sqldf</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
 </code></pre></div>
 <h2>- [ ] GROUP BY/Pivot Tables</h2>
 <div class="codehilite"><pre><span></span><code><span class="c1">## Personally I am not a big fan of group by operations in python, I prefer to use SQL.</span>
@@ -649,10 +627,6 @@ function closeNav() {
 
 <span class="c1"># run your query and save the resulting DF to use as you see fit </span>
 <span class="n">New_DF</span> <span class="o">=</span> <span class="n">pql</span><span class="o">.</span><span class="n">sqldf</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
-</code></pre></div>
-<h2><strong>Sort</strong> a DataFrame and <strong>ORDER BY</strong> a column</h2>
-<div class="codehilite"><pre><span></span><code><span class="c1"># use .sort_values, add your list of columns use ascending T/F </span>
-<span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <h5>Data Types - add NULL values</h5>
 <div class="codehilite"><pre><span></span><code><span class="c1"># use numpy's .nan feature to create null values</span>
