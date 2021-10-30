@@ -162,7 +162,7 @@
 <li><a href="/E%20-%20Databases.html" style="text-decoration:none">   E - Databases   </a></li> <!--&nbsp; is a space -->
 <li><a href="/F%20-%20Descriptive%20Statistics.html" style="text-decoration:none">   F - Descriptive Statistics   </a></li> <!--&nbsp; is a space -->
 <li><a href="/G%20-%20Data%20Visualization.html" style="text-decoration:none">   G - Data Visualization   </a></li> <!--&nbsp; is a space -->
-<li><a href="/H%20-%20Data%20Science.html" style="text-decoration:none">   H - Data Science   </a></li> <!--&nbsp; is a space -->
+<li><a href="/H%20-%20Text%20Processing.html" style="text-decoration:none">   H - Text Processing   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Y%20-%20Datasets.html" style="text-decoration:none">   Y - Datasets   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Z%20-%20Useful%20Snippets.html" style="text-decoration:none">   Z - Useful Snippets   </a></li> <!--&nbsp; is a space -->
 <!--
@@ -199,7 +199,7 @@ function closeNav() {
 <!-- Here's where the blog content will go -->
 <!--&lt;h1&gt;Work with Databases in Python&lt;/h1&gt;
 &lt;h3&gt;Create a database connection&lt;/h3&gt;
-&lt;h6&gt;Get your Password from a file outside your code&lt;/h6&gt;
+&lt;h3&gt;Get your Password from a file outside your code&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;#create a text file and add your pw to the text file&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;# store the path to the password file&lt;/span&gt;
@@ -210,7 +210,7 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file_password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h6&gt;SQLite Connection&lt;/h6&gt;
+&lt;h3&gt;SQLite Connection&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sqlite3&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sql&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;# Create a path to your SQLite DB file&lt;/span&gt;
@@ -221,7 +221,7 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;sqlite_connection&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;connect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h6&gt;Oracle Connection&lt;/h6&gt;
+&lt;h3&gt;Oracle Connection&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# Create an Oracle connection&lt;/span&gt;
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;cx_Oracle&lt;/span&gt;
 
@@ -247,18 +247,16 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;SQL_Server_Engine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqlalchemy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mssql+pyodbc://your.server.address.org/database_name?driver=ODBC Driver 13 for SQL Server?Trusted_Connection=yes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4&gt;Query a Database with SQL and create a DataFrame&lt;/h4&gt;
+&lt;h3&gt;Query a Database with SQL and create a DataFrame&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;SQL_String&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39; &lt;/span&gt;
 &lt;span class=&#34;s1&#34;&gt;                          SELECT *&lt;/span&gt;
 &lt;span class=&#34;s1&#34;&gt;                          FROM My_Table&lt;/span&gt;
 &lt;span class=&#34;s1&#34;&gt;                      &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SQL_String&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;DB_Engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4&gt;Load a DF into a database table&lt;/h4&gt; -->
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; -->
 <h1>Work with Databases in Python</h1>
 <h3>Create a database connection</h3>
-<h6>Get your Password from a file outside your code</h6>
+<h3>Get your Password from a file outside your code</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1">#create a text file and add your pw to the text file</span>
 
 <span class="c1"># store the path to the password file</span>
@@ -268,7 +266,7 @@ function closeNav() {
 <span class="n">file_password</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_password</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span>
 <span class="n">password</span> <span class="o">=</span> <span class="n">file_password</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </code></pre></div>
-<h6>SQLite Connection</h6>
+<h3>SQLite Connection</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>  <span class="k">as</span> <span class="nn">sql</span>
 
 <span class="c1"># Create a path to your SQLite DB file</span>
@@ -278,7 +276,7 @@ function closeNav() {
 
 <span class="n">sqlite_connection</span> <span class="o">=</span> <span class="n">sql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>   
 </code></pre></div>
-<h6>Oracle Connection</h6>
+<h3>Oracle Connection</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Create an Oracle connection</span>
 <span class="kn">import</span> <span class="nn">cx_Oracle</span>
 
@@ -302,14 +300,13 @@ function closeNav() {
 <div class="codehilite"><pre><span></span><code><span class="c1"># you may need to set up an ODBC Driver on your computer before this will work</span>
 <span class="n">SQL_Server_Engine</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="s1">'mssql+pyodbc://your.server.address.org/database_name?driver=ODBC Driver 13 for SQL Server?Trusted_Connection=yes'</span><span class="p">)</span>
 </code></pre></div>
-<h4>Query a Database with SQL and create a DataFrame</h4>
+<h3>Query a Database with SQL and create a DataFrame</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">SQL_String</span> <span class="o">=</span> <span class="s1">''' </span>
 <span class="s1">                          SELECT *</span>
 <span class="s1">                          FROM My_Table</span>
 <span class="s1">                      '''</span>
 <span class="n">DF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span> <span class="n">SQL_String</span> <span class="p">,</span>  <span class="n">DB_Engine</span><span class="p">)</span> 
 </code></pre></div>
-<h4>Load a DF into a database table</h4>
 </div>
 
 
