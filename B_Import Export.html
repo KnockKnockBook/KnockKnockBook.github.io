@@ -207,8 +207,7 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;import_filepath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;import_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2&gt;Import data&lt;/h2&gt;
-&lt;h4&gt;Import from flat file - csv, tab-delimited, etc&lt;/h4&gt;
+&lt;h3&gt;Import from flat file - csv, tab-delimited, etc&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# Create a filepath&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;import_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Import Examples/&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;import_filepath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;import_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;titanic3.csv&amp;quot;&lt;/span&gt;
@@ -236,7 +235,7 @@ function closeNav() {
                          &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4&gt;Import from Excel&lt;/h4&gt;
+&lt;h3&gt;Import from Excel&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;titanic3.xls&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;import_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Import Examples/&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;import_filepath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;import_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;
@@ -265,8 +264,7 @@ function closeNav() {
                          &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2&gt;Export data&lt;/h2&gt;
-&lt;h4&gt;Export to CSV, Text file, or other delimiter&lt;/h4&gt;
+&lt;h3&gt;Export to CSV, Text file, or other delimiter&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;##### Export to CSV file (.csv)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;export_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Export Examples/&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF_Titanic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;titanic3.csv&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -291,7 +289,7 @@ function closeNav() {
                   &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4&gt;Export to Excel&lt;/h4&gt;
+&lt;h3&gt;Export to Excel&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use &amp;#39;to_excel()&amp;#39; and specify a filepath and sheetname&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;export_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Export Examples/&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;DF_Titanic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_excel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;titanic3.xlsx&amp;quot;&lt;/span&gt;
@@ -318,8 +316,7 @@ function closeNav() {
 <span class="n">import_path</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Import Examples/"</span>
 <span class="n">import_filepath</span> <span class="o">=</span> <span class="n">import_path</span> <span class="o">+</span> <span class="n">filename</span>
 </code></pre></div>
-<h2>Import data</h2>
-<h4>Import from flat file - csv, tab-delimited, etc</h4>
+<h3>Import from flat file - csv, tab-delimited, etc</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Create a filepath</span>
 <span class="n">import_path</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Import Examples/"</span>
 <span class="n">import_filepath</span> <span class="o">=</span> <span class="n">import_path</span> <span class="o">+</span> <span class="s2">"titanic3.csv"</span>
@@ -342,7 +339,7 @@ function closeNav() {
                                  <span class="s1">'name'</span>     <span class="p">:</span>  <span class="s1">'object'</span> <span class="p">}</span>
                          <span class="p">)</span>
 </code></pre></div>
-<h4>Import from Excel</h4>
+<h3>Import from Excel</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">filename</span>    <span class="o">=</span> <span class="s2">"titanic3.xls"</span>
 <span class="n">import_path</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Import Examples/"</span>
 <span class="n">import_filepath</span> <span class="o">=</span> <span class="n">import_path</span> <span class="o">+</span> <span class="n">filename</span>
@@ -368,8 +365,7 @@ function closeNav() {
                                  <span class="s1">'name'</span>     <span class="p">:</span>  <span class="s1">'object'</span> <span class="p">}</span>
                          <span class="p">)</span>
 </code></pre></div>
-<h2>Export data</h2>
-<h4>Export to CSV, Text file, or other delimiter</h4>
+<h3>Export to CSV, Text file, or other delimiter</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1">##### Export to CSV file (.csv)</span>
 <span class="n">export_path</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Export Examples/"</span>
 <span class="n">DF_Titanic</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">export_path</span> <span class="o">+</span> <span class="s2">"titanic3.csv"</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
@@ -390,7 +386,7 @@ function closeNav() {
                   <span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pclass'</span><span class="p">,</span> <span class="s1">'survived'</span><span class="p">]</span>  <span class="c1"># specify which columns you want to export</span>
                   <span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
-<h4>Export to Excel</h4>
+<h3>Export to Excel</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># use 'to_excel()' and specify a filepath and sheetname</span>
 <span class="n">export_path</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Datasets/Export Examples/"</span>
 <span class="n">DF_Titanic</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">export_path</span> <span class="o">+</span> <span class="s2">"titanic3.xlsx"</span>
