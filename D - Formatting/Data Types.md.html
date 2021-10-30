@@ -191,73 +191,27 @@ function closeNav() {
 </script>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-<a href="/C%20-%20Data%20Processing/Join%20Merge%20Stack%20Append.md.html">Join Merge Stack Append.md </a>
-<a href="/C%20-%20Data%20Processing/Custom%20Methods.md.html">Custom Methods.md </a>
-<a href="/C%20-%20Data%20Processing/Core%20Data%20Processing%20Methods.md.html">Core Data Processing Methods.md </a>
-<a href="/C%20-%20Data%20Processing/Query%20DataFrames%20with%20SQL.md.html">Query DataFrames with SQL.md </a>
+<a href="/D%20-%20Formatting/Dates%20and%20Time%20Formatting.md.html">Dates and Time Formatting.md </a>
+<a href="/D%20-%20Formatting/Date%20calculations%20and%20filters.md.html">Date calculations and filters.md </a>
+<a href="/D%20-%20Formatting/Data%20Types.md.html">Data Types.md </a>
 </div>
 <div id="main">
 <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
 </div>
 <!-- Here's where the blog content will go -->
-<!--&lt;h2&gt;Query a DataFrame with SQL&lt;/h2&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandasql&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pql&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Write a SQL query and save it as a string&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Refer to your DFs in your SQL as though they were tables&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;SELECT *&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         FROM DF&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         WHERE A = 1&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run your query and save the resulting DF to use as you see fit &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;New_DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqldf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;locals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;&lt;strong&gt;GROUP BY&lt;/strong&gt; operations to&lt;/h2&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;## Personally I am not a big fan of group by operations in python, I prefer to use SQL.&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandasql&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pql&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Write a SQL query and save it as a string&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Refer to your DFs in your SQL as though they were tables&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;SELECT B&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;              , count(A) AS my_count&lt;/span&gt;
-
-&lt;span class=&#34;s1&#34;&gt;         FROM DF&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         Group by A&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run your query and save the resulting DF to use as you see fit &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;New_DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqldf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;locals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+<!--&lt;h1&gt;Data Types&lt;/h1&gt;
+&lt;h3&gt;NULL values&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use numpy&amp;#39;s .nan feature to create null values&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;null_value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nan&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;has_nulls&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;i am here&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# as you can see, the &amp;#39;&amp;#39; isn&amp;#39;t actually null &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; -->
-<h2>Query a DataFrame with SQL</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandasql</span> <span class="k">as</span> <span class="nn">pql</span>
-
-<span class="c1"># Write a SQL query and save it as a string</span>
-<span class="c1"># Refer to your DFs in your SQL as though they were tables</span>
-<span class="n">sql</span> <span class="o">=</span> <span class="s1">'''SELECT *</span>
-<span class="s1">         FROM DF</span>
-<span class="s1">         WHERE A = 1</span>
-<span class="s1">      '''</span>
-
-<span class="c1"># run your query and save the resulting DF to use as you see fit </span>
-<span class="n">New_DF</span> <span class="o">=</span> <span class="n">pql</span><span class="o">.</span><span class="n">sqldf</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
-</code></pre></div>
-<h2><strong>GROUP BY</strong> operations to</h2>
-<div class="codehilite"><pre><span></span><code><span class="c1">## Personally I am not a big fan of group by operations in python, I prefer to use SQL.</span>
-<span class="kn">import</span> <span class="nn">pandasql</span> <span class="k">as</span> <span class="nn">pql</span>
-
-<span class="c1"># Write a SQL query and save it as a string</span>
-<span class="c1"># Refer to your DFs in your SQL as though they were tables</span>
-<span class="n">sql</span> <span class="o">=</span> <span class="s1">'''SELECT B</span>
-<span class="s1">              , count(A) AS my_count</span>
-
-<span class="s1">         FROM DF</span>
-<span class="s1">         Group by A</span>
-<span class="s1">      '''</span>
-
-<span class="c1"># run your query and save the resulting DF to use as you see fit </span>
-<span class="n">New_DF</span> <span class="o">=</span> <span class="n">pql</span><span class="o">.</span><span class="n">sqldf</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+<h1>Data Types</h1>
+<h3>NULL values</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># use numpy's .nan feature to create null values</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">null_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'has_nulls'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">'i am here'</span><span class="p">,</span> <span class="s1">''</span><span class="p">]</span>  <span class="c1"># as you can see, the '' isn't actually null </span>
 </code></pre></div>
 </div>
 

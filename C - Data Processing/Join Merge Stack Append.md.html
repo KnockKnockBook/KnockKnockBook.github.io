@@ -191,9 +191,9 @@ function closeNav() {
 </script>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-<a href="/C%20-%20Data%20Processing/Data%20Processing.md.html">Data Processing.md </a>
-<a href="/C%20-%20Data%20Processing/Process%20and%20Fill%20Empty%20DF.md.html">Process and Fill Empty DF.md </a>
-<a href="/C%20-%20Data%20Processing/Join%20Stack%20Append.md.html">Join Stack Append.md </a>
+<a href="/C%20-%20Data%20Processing/Join%20Merge%20Stack%20Append.md.html">Join Merge Stack Append.md </a>
+<a href="/C%20-%20Data%20Processing/Custom%20Methods.md.html">Custom Methods.md </a>
+<a href="/C%20-%20Data%20Processing/Core%20Data%20Processing%20Methods.md.html">Core Data Processing Methods.md </a>
 <a href="/C%20-%20Data%20Processing/Query%20DataFrames%20with%20SQL.md.html">Query DataFrames with SQL.md </a>
 </div>
 <div id="main">
@@ -214,7 +214,7 @@ function closeNav() {
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;&lt;strong&gt;Append&lt;/strong&gt; a new row to a DataFrame&lt;/h2&gt;
-&lt;h4&gt;Option 1: Add Rows to a DataFrame with a &lt;strong&gt;dictionary&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3&gt;Option 1: Add Rows to a DataFrame with a &lt;strong&gt;dictionary&lt;/strong&gt;&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# create dictionary with the column names a new values for each column&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;new_row&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;B&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;z&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;business&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;has_nulls&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;here here&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
@@ -240,7 +240,7 @@ function closeNav() {
 <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">df3</span><span class="p">,</span> <span class="n">dfx</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <h2><strong>Append</strong> a new row to a DataFrame</h2>
-<h4>Option 1: Add Rows to a DataFrame with a <strong>dictionary</strong></h4>
+<h3>Option 1: Add Rows to a DataFrame with a <strong>dictionary</strong></h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># create dictionary with the column names a new values for each column</span>
 <span class="n">new_row</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">:</span><span class="s1">'z'</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">:</span><span class="s2">"business"</span><span class="p">,</span><span class="s2">"has_nulls"</span><span class="p">:</span> <span class="s2">"here here"</span><span class="p">}</span>
 
