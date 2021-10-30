@@ -241,7 +241,7 @@ function closeNav() {
 &lt;span class=&#34;n&#34;&gt;Oracle_DB_Engine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;formated_oracle_connection_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4&gt;SQL Server Connection Trusted Connection&lt;/h4&gt;
+&lt;h3&gt;SQL Server Connection Trusted Connection&lt;/h3&gt;
 &lt;p&gt;The nice thing about a trusted connection is that you don&#39;t have to worry about storing or using your password in your code.&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# you may need to set up an ODBC Driver on your computer before this will work&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;SQL_Server_Engine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sqlalchemy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mssql+pyodbc://your.server.address.org/database_name?driver=ODBC Driver 13 for SQL Server?Trusted_Connection=yes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -295,7 +295,7 @@ function closeNav() {
 <span class="c1"># 2.3 Use the string to create a database connection</span>
 <span class="n">Oracle_DB_Engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">formated_oracle_connection_string</span><span class="p">)</span>
 </code></pre></div>
-<h4>SQL Server Connection Trusted Connection</h4>
+<h3>SQL Server Connection Trusted Connection</h3>
 <p>The nice thing about a trusted connection is that you don't have to worry about storing or using your password in your code.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># you may need to set up an ODBC Driver on your computer before this will work</span>
 <span class="n">SQL_Server_Engine</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="s1">'mssql+pyodbc://your.server.address.org/database_name?driver=ODBC Driver 13 for SQL Server?Trusted_Connection=yes'</span><span class="p">)</span>
