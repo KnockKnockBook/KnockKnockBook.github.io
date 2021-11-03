@@ -146,7 +146,7 @@
       }
       </style>
 </head></html></div>
-<title> A_Home </title>
+<title> 4-Formatting </title>
 
 <!-- Here's the header content -->
 <div class="container">
@@ -192,40 +192,30 @@ function closeNav() {
 </script>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-<a href="/A_Home/1.1-ReadME.md.html">1.1-ReadME.md </a>
+<a href="/4-Formatting/Date%20calculations%20and%20filters.md.html">Date calculations and filters.md </a>
+<a href="/4-Formatting/4.1-Format%20Dates%20and%20Times.md.html">4.1-Format Dates and Times.md </a>
+<a href="/4-Formatting/Data%20Types.md.html">Data Types.md </a>
 </div>
 <div id="main">
 <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
 </div>
 <!-- Here's where the blog content will go -->
-<!--&lt;h1&gt;Welcome to the &lt;strong&gt;Data Science Playbook&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;What the project does&lt;/strong&gt;
-- Hello Data Science World!  This project is a collection of code snippets for doing data science.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In other words this site is dedicated to using machine learning to train models that train humans to learn about machine learning.
-&lt;strong&gt;Why the project is useful&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Data science is easier when you can grab code snippets from a recipe book.  It makes every single data science byte extra tasty.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;How users can get started with the project&lt;/strong&gt;
-- Feel free to grab snippets of code and use it.  &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Where users can get help with your project&lt;/strong&gt;
-- If you have ideas for improving this repository, send me an email at DataSciencePlaybook@gmail.com&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Who maintains and contributes to the project&lt;/strong&gt;
-This code is available on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&lt;/p&gt; -->
-<h1>Welcome to the <strong>Data Science Playbook</strong></h1>
-<p><strong>What the project does</strong>
-- Hello Data Science World!  This project is a collection of code snippets for doing data science.</p>
-<ul>
-<li>In other words this site is dedicated to using machine learning to train models that train humans to learn about machine learning.
-<strong>Why the project is useful</strong></li>
-<li>Data science is easier when you can grab code snippets from a recipe book.  It makes every single data science byte extra tasty.</li>
-</ul>
-<p><strong>How users can get started with the project</strong>
-- Feel free to grab snippets of code and use it.  </p>
-<p><strong>Where users can get help with your project</strong>
-- If you have ideas for improving this repository, send me an email at DataSciencePlaybook@gmail.com</p>
-<p><strong>Who maintains and contributes to the project</strong>
-This code is available on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p>
+<!--&lt;h1&gt;Data Types&lt;/h1&gt;
+&lt;p&gt;Convert the datatype of a column in pandas&lt;/p&gt;
+&lt;h3&gt;NULL values&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# use numpy&amp;#39;s .nan feature to create null values&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;null_value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nan&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;DF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;has_nulls&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;i am here&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# as you can see, the &amp;#39;&amp;#39; isn&amp;#39;t actually null &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; -->
+<h1>Data Types</h1>
+<p>Convert the datatype of a column in pandas</p>
+<h3>NULL values</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># use numpy's .nan feature to create null values</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">null_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'has_nulls'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">'i am here'</span><span class="p">,</span> <span class="s1">''</span><span class="p">]</span>  <span class="c1"># as you can see, the '' isn't actually null </span>
+</code></pre></div>
 </div>
 
 
