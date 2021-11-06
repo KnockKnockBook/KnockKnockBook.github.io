@@ -4,6 +4,15 @@
 
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
 <!-- Required meta tags -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -195,10 +204,12 @@ function closeNav() {
 <a href="/9-Useful-Snippets/9.2-Useful%20Snippets.md.html">9.2-Useful Snippets.md </a>
 </div>
 <div id="main">
-<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+<button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>9.2-Useful Snippets.md</p></b></h1>
+<h1 style="text-align: center;"><b><p>9.2 Useful Snippets</p></b></h1>
+<h3><b></b></h3>
+<h3><b><p>Example:</p></b></h3>
 <h6>Turn a DF column into a list</h6>
 <div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s2">"column_name"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 </code></pre></div>
@@ -280,8 +291,9 @@ DF.drop_duplicates()
 <span class="c1"># and specify the columns to apply it to</span>
 <span class="n">DF</span><span class="p">[</span><span class="s1">'column'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">uppercase</span><span class="p">)</span>
 </code></pre></div>
+<h3><b></b></h3>
+<h3><b></b></h3>
 <!-- -->
-<h1>A Blue Heading</h1>
 </div>
 
 

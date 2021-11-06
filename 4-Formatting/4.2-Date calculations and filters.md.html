@@ -4,6 +4,15 @@
 
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
 <!-- Required meta tags -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -197,10 +206,12 @@ function closeNav() {
 <a href="/4-Formatting/4.3-Data%20Types.md.html">4.3-Data Types.md </a>
 </div>
 <div id="main">
-<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+<button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>4.2-Date calculations and filters.md</p></b></h1>
+<h1 style="text-align: center;"><b><p>4.2 Date calculations and filters</p></b></h1>
+<h3><b></b></h3>
+<h3><b><p>Example:</p></b></h3>
 <p><strong>Date Calculations and Filtering</strong></p>
 <h3>Example DataFrame with column of dates 'date_time_string', which is in string format</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -238,8 +249,9 @@ function closeNav() {
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'date_time_formated'</span><span class="p">])</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'Letter_above'</span><span class="p">]</span>  <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Letter'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># include the value you want to shift and the number of days to shift</span>
 </code></pre></div>
+<h3><b></b></h3>
+<h3><b></b></h3>
 <!-- -->
-<h1>A Blue Heading</h1>
 </div>
 
 

@@ -4,6 +4,15 @@
 
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
 <!-- Required meta tags -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -196,11 +205,13 @@ function closeNav() {
 <a href="/2-Import-Export/2.2-Export%20Data.md.html">2.2-Export Data.md </a>
 </div>
 <div id="main">
-<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+<button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>2.2-Export Data.md</p></b></h1>
+<h1 style="text-align: center;"><b><p>2.2 Export Data</p></b></h1>
+<h3><b><p>Description:</p></b></h3>
 <p>Export data from several common data sources, including csv files, tab-delimited text files, and Excel.  Control which columns are exported imported and their data types.</p>
+<h3><b><p>Example:</p></b></h3>
 <h3>Libraries &amp; Data</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Import libraries</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -256,9 +267,10 @@ function closeNav() {
                     <span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"openpyxl"</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>  
     <span class="n">DF</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">'Appended_Sheet'</span><span class="p">)</span>
 </code></pre></div>
+<h3><b><p>Discussion:</p></b></h3>
 <p>In this example we looked at how to export data from python to a few popular data formats including csv files, tab delimited text files, and Excel files.</p>
+<h3><b></b></h3>
 <!-- -->
-<h1>A Blue Heading</h1>
 </div>
 
 

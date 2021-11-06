@@ -4,6 +4,15 @@
 
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
 <!-- Required meta tags -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -196,11 +205,13 @@ function closeNav() {
 <a href="/2-Import-Export/2.2-Export%20Data.md.html">2.2-Export Data.md </a>
 </div>
 <div id="main">
-<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+<button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>2.1-Import Data.md</p></b></h1>
+<h1 style="text-align: center;"><b><p>2.1 Import Data</p></b></h1>
+<h3><b><p>Description:</p></b></h3>
 <p>Import data from several common data sources, including csv files, tab-delimited text files, and Excel.  Learn a few useful design patterns such as constructing paths to your data, and controlling which columns get imported and their data types.</p>
+<h3><b><p>Example:</p></b></h3>
 <h3>Libraries &amp; Data</h3>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Import libraries</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -249,9 +260,10 @@ function closeNav() {
                             <span class="s1">'name'</span>     <span class="p">:</span>  <span class="s1">'object'</span> <span class="p">}</span>
                          <span class="p">)</span>
 </code></pre></div>
+<h3><b><p>Discussion:</p></b></h3>
 <p>In this example we looked at how to import data into python from a few different data sources including csv files, tab delimited text files, and Excel files.  This included constructing file paths by combining file paths with file names, importing from a variety of datasets, and controlling which columns get imported, and controlling the data types of data that is imported.</p>
+<h3><b></b></h3>
 <!-- -->
-<h1>A Blue Heading</h1>
 </div>
 
 

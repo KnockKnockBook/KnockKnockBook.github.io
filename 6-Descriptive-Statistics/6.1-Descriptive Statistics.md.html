@@ -4,6 +4,15 @@
 
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
 <!-- Required meta tags -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -195,10 +204,12 @@ function closeNav() {
 <a href="/6-Descriptive-Statistics/6.1-Descriptive%20Statistics.md.html">6.1-Descriptive Statistics.md </a>
 </div>
 <div id="main">
-<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+<button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>6.1-Descriptive Statistics.md</p></b></h1>
+<h1 style="text-align: center;"><b><p>6.1 Descriptive Statistics</p></b></h1>
+<h3><b></b></h3>
+<h3><b><p>Example:</p></b></h3>
 <h1>Descriptive Statistics</h1>
 <h6>Create an example DF</h6>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -228,8 +239,9 @@ function closeNav() {
 <div class="codehilite"><pre><span></span><code><span class="c1"># count number of distinct values in column 'B'</span>
 <span class="n">DF</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'B'</span><span class="p">)[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 </code></pre></div>
+<h3><b></b></h3>
+<h3><b></b></h3>
 <!-- -->
-<h1>A Blue Heading</h1>
 </div>
 
 
