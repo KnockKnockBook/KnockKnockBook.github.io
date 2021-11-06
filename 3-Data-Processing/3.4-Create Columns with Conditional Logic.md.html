@@ -217,45 +217,79 @@ function closeNav() {
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>3.1 Get Column Info</p></b></h1>
-<h3><b></b></h3>
+<h1 style="text-align: center;"><b><p>3.4 Create Columns with Conditional Logic</p></b></h1>
+<h3><b><p>Description:</p></b></h3>
+<p>It's common to need to use conditional logic to create a new column in a DataFrame based on what is true or false about other columns in the DataFrame.  In SQL this operation is called a CASE WHEN statement.</p>
 <h3><b><p>Example:</p></b></h3>
-<h3>Libraries &amp; Data</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Import libraries</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Libraries used here</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code># create example data
-DF = pd.DataFrame()
-DF['A'] = [1,2,3]
-DF['B'] = ['a','b', 'c']
-DF['C'] = ['how',  'about','that']
+<div class="codehilite"><pre><span></span><code><span class="c1"># Create an empty dataframe</span>
+<span class="n">DF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># Add new columns using lists of values</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">]</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'C'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'how'</span><span class="p">,</span>  <span class="s1">'about'</span><span class="p">,</span><span class="s1">'that'</span><span class="p">]</span>
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
+<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
    <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>
 <span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>
 <span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>
 <span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>
 </code></pre></div>
-<h3>Get the columns names and their data types</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get the data types of each column in your DF</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">dtypes</span> 
+<h3>Option 1: Use 'DF.loc' and 2 logic statements</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Create a new column where condition is true (new column will be 'NaN' where it's not true)</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_true'</span>
+<span class="c1"># Create a second statement where where condition is NOT true to update all the other values </span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_false'</span>
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
-<span class="n">A</span>     <span class="n">int64</span>
-<span class="n">B</span>    <span class="nb">object</span>
-<span class="n">C</span>    <span class="nb">object</span>
-<span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
+   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
+<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
+<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
 </code></pre></div>
-<h3>Get a list of columns names.  This is useful when you want to grab several column names and add them some place else in your code.</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get a list of the columns in your DF</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">columns</span> 
+<h3>Option 2:  Use 'np.where()' and one logic statement</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'b'</span> <span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">)</span>
 </code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
-<span class="n">Index</span><span class="p">([</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'object'</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
+   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
+<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
+<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
+
+<span class="c1"># np.where generates an np array which can be added as a column to a DataFrame</span>
+<span class="n">array</span><span class="p">([</span><span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'&lt;U14'</span><span class="p">)</span>
+</code></pre></div>
+<h3>Option 3: Create and apply a custom function</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Create a function that applies the same if/then logic as above</span>
+<span class="k">def</span> <span class="nf">CASE_WHEN_func</span><span class="p">(</span><span class="n">column</span><span class="p">):</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">column</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">:</span>
+        <span class="n">return_value</span> <span class="o">=</span> <span class="s1">'value_if_true'</span>
+
+    <span class="k">if</span> <span class="n">column</span> <span class="o">!=</span> <span class="s1">'b'</span><span class="p">:</span>
+        <span class="n">return_value</span> <span class="o">=</span> <span class="s1">'value_if_false'</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">return_value</span><span class="p">)</span>
+
+<span class="c1"># Create a new column by applying the function</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">CASE_WHEN_func</span><span class="p">)</span>
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
+   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
+<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
+<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
+</code></pre></div>
+<h3>These methods work for comparing values across columns, and return the results from other columns, and not just for static values.</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># if column A = Column B return column C</span>
+<span class="n">DF</span><span class="p">[</span><span class="s1">'G'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'C'</span><span class="p">]</span> 
 </code></pre></div>
 <h3><b><p>Discussion:</p></b></h3>
-<p>While using '.dtypes' to print out column names and their data types is more descriptive, getting a list of column names in 'list' format is useful when you need column names in list format. For example, if you need to add these column names to some other place in your code, having a list of column names in the right format saves you from manually formating quotation marks and commas around each column name, which is a real pain.</p>
+<p>There are several options for creating new columns using conditional logic, and the best solution depends on your use case.  Personally, I find using 'DF.loc' and 2 logic statements the easiest to read since the syntax is almost the same as the syntax for filtering a dataframe.  However, using multiple proceedures to perform a single operation has some disadvantages as well.  By combining both operations in one command, 'np.where()' provides a more streamlined solution.  Finally, for use cases that involves more complex logic, or when the same logic gets used multiple places across a program, creating a custom function and applying it to create a new column may be the best solution.  This method ensures your logic is applied consistently across your program and prevents needing to update programs in multiple locations if requirements change.  Building out a library of these custom data processing functions for later re-use is also a great way to save time on future projects.</p>
 <h3><b></b></h3>
 <!-- -->
 </div>

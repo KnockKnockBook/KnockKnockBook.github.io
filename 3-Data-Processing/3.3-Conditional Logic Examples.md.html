@@ -112,7 +112,7 @@
       .sidebar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 15px;
         color: #818181;
         display: block;
         transition: 0.3s;
@@ -201,112 +201,26 @@ function closeNav() {
 </script>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-<a href="/3-Data-Processing/3.1-Core%20Data%20Processing%20Methods.md.html">3.1-Core Data Processing Methods.md </a>
-<a href="/3-Data-Processing/3.2-Join%20Merge%20Stack%20Append.md.html">3.2-Join Merge Stack Append.md </a>
-<a href="/3-Data-Processing/3.3-Query%20DataFrames%20with%20SQL.md.html">3.3-Query DataFrames with SQL.md </a>
-<a href="/3-Data-Processing/3.4-Custom%20Methods.md.html">3.4-Custom Methods.md </a>
+<a href="/3-Data-Processing/3.1-Get%20Column%20Info.md.html">3.1-Get Column Info.md </a>
+<a href="/3-Data-Processing/3.2-Manage%20Column%20Names.md.html">3.2-Manage Column Names.md </a>
+<a href="/3-Data-Processing/3.3-Conditional%20Logic%20Examples.md.html">3.3-Conditional Logic Examples.md </a>
+<a href="/3-Data-Processing/3.4-Create%20Columns%20with%20Conditional%20Logic.md.html">3.4-Create Columns with Conditional Logic.md </a>
+<a href="/3-Data-Processing/3.5-Find%20and%20Replace.md.html">3.5-Find and Replace.md </a>
+<a href="/3-Data-Processing/3.61-Sort%20a%20Dataframe.md.html">3.61-Sort a Dataframe.md </a>
+<a href="/3-Data-Processing/3.62-%20Create%20a%20Rank%20Column.md.html">3.62- Create a Rank Column.md </a>
+<a href="/3-Data-Processing/3.7-Count%20Rows.md.html">3.7-Count Rows.md </a>
+<a href="/3-Data-Processing/3.8-Group%20By%20and%20SQL%20in%20Python.md.html">3.8-Group By and SQL in Python.md </a>
+<a href="/3-Data-Processing/3.91-Combine%20Data%20Join%20Merge%20Stack%20and%20Append.md.html">3.91-Combine Data Join Merge Stack and Append.md </a>
+<a href="/3-Data-Processing/3.92-Custom%20Methods.md.html">3.92-Custom Methods.md </a>
 </div>
 <div id="main">
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>3.1 Core Data Processing Methods</p></b></h1>
+<h1 style="text-align: center;"><b><p>3.3 Conditional Logic Examples</p></b></h1>
 <h3><b><p>Description:</p></b></h3>
-<p>Add Description</p>
+<p>Here is a collection of conditional logic examples.</p>
 <h3><b><p>Example:</p></b></h3>
-<h1>Data Processing</h1>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Libraries used here</span>
-<span class="kn">import</span> <span class="nn">padas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Create an empty dataframe</span>
-<span class="n">DF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-
-<span class="c1"># Add new columns using lists of values</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">]</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'C'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'how'</span><span class="p">,</span>  <span class="s1">'about'</span><span class="p">,</span><span class="s1">'that'</span><span class="p">]</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
-   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>
-<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>
-<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>
-<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>
-</code></pre></div>
-<h1>Managing Columns</h1>
-<h3>Get info about columns names and data types of columns</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get the data types of each column in your DF</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">dtypes</span> 
-
-<span class="c1"># get a list of the columns in your DF</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">columns</span> 
-</code></pre></div>
-<h1>SELECT, Drop, and Rename columns</h1>
-<h3><strong>SELECT</strong> specific columns in a DF</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">]]</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
-   <span class="n">A</span>  <span class="n">B</span>
-<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>
-<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>
-<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>
-</code></pre></div>
-<h3><strong>DROP</strong> columns from DF</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># use .drop(['column_name'], axis = 1)</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'B'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span>
-   <span class="n">A</span>      <span class="n">C</span>
-<span class="mi">0</span>  <span class="mi">1</span>    <span class="n">how</span>
-<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">about</span>
-<span class="mi">2</span>  <span class="mi">3</span>   <span class="n">that</span>
-</code></pre></div>
-<h3><strong>Alias</strong> and <strong>rename</strong> columns to give them new names</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create a dictionary that maps your old columns to new columns</span>
-<span class="c1"># use .rename(columns = {'OLD':'new'})</span>
-
-<span class="n">new_columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'A'</span><span class="p">:</span><span class="s1">'new_a'</span>
-              <span class="p">,</span><span class="s1">'B'</span><span class="p">:</span><span class="s1">'new_b'</span>
-              <span class="p">,</span><span class="s1">'C'</span><span class="p">:</span><span class="s1">'new_c'</span><span class="p">}</span>
-
-<span class="n">DF</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span><span class="p">)</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="n">Out</span><span class="p">[</span><span class="n">xx</span><span class="p">]:</span> 
-   <span class="n">new_a</span> <span class="n">new_b</span>  <span class="n">new_c</span>
-<span class="mi">0</span>      <span class="mi">1</span>     <span class="n">a</span>    <span class="n">how</span>
-<span class="mi">1</span>      <span class="mi">2</span>     <span class="n">b</span>  <span class="n">about</span>
-<span class="mi">2</span>      <span class="mi">3</span>     <span class="n">c</span>   <span class="n">that</span>
-</code></pre></div>
-<h1>CASE WHEN Logic</h1>
-<h2>Create new columns with logical conditions</h2>
-<h3>Option 1: Use 'DF.loc' and 2 logic statements</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Create a new column where condition is true (new column will be 'NaN' where it's not true)</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_true'</span>
-<span class="c1"># Create a second statement where where condition is NOT true to update all the other values </span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'value_if_false'</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
-   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
-<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
-<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
-<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
-</code></pre></div>
-<h3>Option 2:  Use 'np.where()' and one logic statement</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span><span class="mi">2</span> <span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">)</span>
-</code></pre></div>
-<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">DF</span><span class="p">)</span>
-   <span class="n">A</span>  <span class="n">B</span>      <span class="n">C</span>               <span class="n">D</span>
-<span class="mi">0</span>  <span class="mi">1</span>  <span class="n">a</span>    <span class="n">how</span>  <span class="n">value_if_false</span>
-<span class="mi">1</span>  <span class="mi">2</span>  <span class="n">b</span>  <span class="n">about</span>   <span class="n">value_if_true</span>
-<span class="mi">2</span>  <span class="mi">3</span>  <span class="n">c</span>   <span class="n">that</span>  <span class="n">value_if_fals</span>
-
-<span class="c1"># np.where generates an np array which can be added as a column to a DataFrame</span>
-<span class="n">array</span><span class="p">([</span><span class="s1">'value_if_false'</span><span class="p">,</span> <span class="s1">'value_if_true'</span><span class="p">,</span> <span class="s1">'value_if_false'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'&lt;U14'</span><span class="p">)</span>
-</code></pre></div>
-<h2>Compare values across columns, and return the results from other columns</h2>
-<div class="codehilite"><pre><span></span><code><span class="c1"># if column A = Column B return column C</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'G'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span> <span class="o">==</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span> <span class="p">,</span> <span class="s1">'new_column_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'C'</span><span class="p">]</span> 
-</code></pre></div>
 <h1>'If Then' Logic Filters</h1>
 <p>Filtering a DataFrame consists of two steps.  First, write a true/false statement.  Second, use the true/false statement to filter the DataFrame to cases where the statement = True </p>
 <h3>Create a True/False statement using a DF column, and return True/False</h3>
@@ -366,52 +280,6 @@ function closeNav() {
 <h4>Where column <strong>NOT IN list</strong> of values</h4>
 <div class="codehilite"><pre><span></span><code><span class="c1"># use the ~ before your true/false condition</span>
 <span class="n">DF</span><span class="p">[</span> <span class="o">~</span><span class="p">(</span> <span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">])</span> <span class="p">)</span> <span class="p">]</span>
-</code></pre></div>
-<h2>Find and Replace</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'column'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s1">'old_val'</span><span class="p">,</span> <span class="s1">'new_val'</span><span class="p">])</span>
-</code></pre></div>
-<h2><strong>Sort</strong> a DataFrame and <strong>ORDER BY</strong> a column</h2>
-<div class="codehilite"><pre><span></span><code><span class="c1"># use .sort_values, add your list of columns use ascending True or False</span>
-<span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-<h1>Create a 'Rank' column with the position of a row in the DF</h1>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Create an index like column 'rank' to use as a label for the x-axis so that your chart looks pretty</span>
-<span class="n">DF_Sorted</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'column_name'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-<span class="n">DF_Sorted</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'rank'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">DF_Sorted</span><span class="p">[</span><span class="s1">'column_name'</span><span class="p">])))</span>
-</code></pre></div>
-<h1>Total Rows, total unique rows, and sum of rows</h1>
-<h1>Get information about the total number of rows, and the total number of unique rows in a DataFrame</h1>
-<h3>Count total Rows in DF with len(DF.index)</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get the number of rows in your DF</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="c1"># Use the DF's index to count the rows in the DF</span>
-</code></pre></div>
-<h2><strong>Count (*)</strong> Get a total row count of Non-Null rows - .count()</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'A'</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>       <span class="c1"># Count non null values</span>
-</code></pre></div>
-<h2><strong>Count Distinct</strong> Get total unique rows - .nunique()</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">DF</span><span class="p">[</span><span class="s1">'B'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
-</code></pre></div>
-<h2>- [ ] GROUP BY/Pivot Tables</h2>
-<div class="codehilite"><pre><span></span><code><span class="c1">## Personally I am not a big fan of group by operations in python, I prefer to use SQL.</span>
-<span class="kn">import</span> <span class="nn">pandasql</span> <span class="k">as</span> <span class="nn">pql</span>
-
-<span class="c1"># Write a SQL query and save it as a string</span>
-<span class="c1"># Refer to your DFs in your SQL as though they were tables</span>
-<span class="n">sql</span> <span class="o">=</span> <span class="s1">'''SELECT B</span>
-<span class="s1">              , count(A) AS my_count</span>
-
-<span class="s1">         FROM DF</span>
-<span class="s1">         Group by A</span>
-<span class="s1">      '''</span>
-
-<span class="c1"># run your query and save the resulting DF to use as you see fit </span>
-<span class="n">New_DF</span> <span class="o">=</span> <span class="n">pql</span><span class="o">.</span><span class="n">sqldf</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
-</code></pre></div>
-<h5>Data Types - add NULL values</h5>
-<div class="codehilite"><pre><span></span><code><span class="c1"># use numpy's .nan feature to create null values</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">null_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">DF</span><span class="p">[</span><span class="s1">'has_nulls'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">'i am here'</span><span class="p">,</span> <span class="s1">''</span><span class="p">]</span>  <span class="c1"># as you can see, the '' isn't actually null </span>
 </code></pre></div>
 <h3><b></b></h3>
 <h3><b></b></h3>
