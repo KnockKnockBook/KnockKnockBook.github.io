@@ -201,36 +201,7 @@ function closeNav() {
 <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
 </div>
 <!-- Here's where the blog content will go -->
-<!--&lt;h2&gt;Query a DataFrame with SQL&lt;/h2&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandasql&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pql&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Write a SQL query and save it as a string&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Refer to your DFs in your SQL as though they were tables&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;SELECT *&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         FROM DF&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         WHERE A = 1&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run your query and save the resulting DF to use as you see fit &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;New_DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqldf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;locals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;&lt;strong&gt;GROUP BY&lt;/strong&gt; operations to&lt;/h2&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;## Personally I am not a big fan of group by operations in python, I prefer to use SQL.&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandasql&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pql&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Write a SQL query and save it as a string&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Refer to your DFs in your SQL as though they were tables&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;SELECT B&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;              , count(A) AS my_count&lt;/span&gt;
-
-&lt;span class=&#34;s1&#34;&gt;         FROM DF&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;         Group by A&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# run your query and save the resulting DF to use as you see fit &lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;New_DF&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqldf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;locals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; -->
+<h1 style="text-align: center;"><b><p>3.3-Query DataFrames with SQL.md</p></b></h1>
 <h2>Query a DataFrame with SQL</h2>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandasql</span> <span class="k">as</span> <span class="nn">pql</span>
 
@@ -260,6 +231,8 @@ function closeNav() {
 <span class="c1"># run your query and save the resulting DF to use as you see fit </span>
 <span class="n">New_DF</span> <span class="o">=</span> <span class="n">pql</span><span class="o">.</span><span class="n">sqldf</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
 </code></pre></div>
+<!-- -->
+<h1>A Blue Heading</h1>
 </div>
 
 
