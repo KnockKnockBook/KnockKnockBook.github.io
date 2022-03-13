@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,16 +203,23 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Use SQL to apply conditional logic</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Conditional%20Logic/9.0.0%20Query%20a%20DataFrame%20with%20SQL.html">9.0.0 Query a DataFrame with SQL</a></li>
 </ul>
 </li>
 <li><strong>Filter a DataFrame using Conditional Logic </strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Conditional%20Logic/9.0.1%20Where%20Column%20Equals%20Value.html">9.0.1 Where Column Equals Value</a></li>
 <li> <a href="/Conditional%20Logic/9.0.2%20Where%20Column%20Does%20NOT%20Equal%20Value.html">9.0.2 Where Column Does NOT Equal Value</a></li>
 <li> <a href="/Conditional%20Logic/9.0.3%20Where%20Column%20IN%20List%20.html">9.0.3 Where Column IN List </a></li>
@@ -224,14 +231,14 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Create Columns with Conditional Logic</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Conditional%20Logic/9.0.9%20CASE%20WHEN%20logic%20-%20Option%201%20%28pandas%20.loc%29.html">9.0.9 CASE WHEN logic - Option 1 (pandas .loc)</a></li>
 <li> <a href="/Conditional%20Logic/9.0.10%20CASE%20WHEN%20logic%20-%20Option%202%20%28np.where%29.html">9.0.10 CASE WHEN logic - Option 2 (np.where)</a></li>
 <li> <a href="/Conditional%20Logic/9.0.11%20CASE%20WHEN%20logic%20-%20Option%203%20%28create%20and%20apply%20a%20custom%20function%29.html">9.0.11 CASE WHEN logic - Option 3 (create and apply a custom function)</a></li>
 </ul>
 </li>
 <li><strong>Rank a column</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Conditional%20Logic/9.0.12%20Create%20a%20rank%20column.html">9.0.12 Create a rank column</a></li>
 </ul>
 </li>

@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,11 +203,18 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Connect to Data Sources</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Data%20Connections/6.0.0%20Construct%20a%20filepath.html">6.0.0 Construct a filepath</a></li>
 <li> <a href="/Data%20Connections/6.0.1%20Create%20a%20SQLite%20Connection.html">6.0.1 Create a SQLite Connection</a></li>
 </ul>

@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,22 +203,29 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Create Empty DataFrame</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Python%20IO/4.0.0%20Create%20Empty%20Dataframe.html">4.0.0 Create Empty Dataframe</a></li>
 <li> <a href="/Python%20IO/4.0.1%20Create%20Empty%20Dataframe%20with%20column%20names.html">4.0.1 Create Empty Dataframe with column names</a></li>
 </ul>
 </li>
 <li><strong>Import from Python</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Python%20IO/4.0.2%20Create%20dataframe%20and%20add%20columns%20from%20lists.html">4.0.2 Create dataframe and add columns from lists</a></li>
 </ul>
 </li>
 <li><strong>Export to Python Data Structures</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Python%20IO/4.0.3%20convert%20a%20column%20to%20a%20list.html">4.0.3 convert a column to a list</a></li>
 <li> <a href="/Python%20IO/4.0.4%20Export%20two%20columns%20to%20a%20python%20dictionary.html">4.0.4 Export two columns to a python dictionary</a></li>
 </ul>

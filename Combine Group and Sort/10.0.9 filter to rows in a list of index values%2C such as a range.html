@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,11 +203,18 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Combine DataFrame - Merge Join and Stack</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.0%20JOIN%20or%20MERGE%20two%20dataframes.html">10.0.0 JOIN or MERGE two dataframes</a></li>
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.1%20STACK%20and%20UNION%20DataFrames%20on%20top%20of%20each%20other.html">10.0.1 STACK and UNION DataFrames on top of each other</a></li>
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.2%20Append%20a%20new%20row%20to%20a%20DataFrame%20with%20a%20Dictionary.html">10.0.2 Append a new row to a DataFrame with a Dictionary</a></li>
@@ -215,30 +222,30 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Group By </strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.4%20Use%20SQL%20to%20perform%20a%20Group%20By%20operation.html">10.0.4 Use SQL to perform a Group By operation</a></li>
 </ul>
 </li>
 <li><strong>Sort</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.5%20Sort%20Ascending%20and%20descending.html">10.0.5 Sort Ascending and descending</a></li>
 </ul>
 </li>
 <li><strong>Return Limited set of rows</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.6%20Get%20TOP%20x%20Rows.html">10.0.6 Get TOP x Rows</a></li>
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.7%20Get%20BOTTOM%20X%20Rows.html">10.0.7 Get BOTTOM X Rows</a></li>
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.8%20Get%20random%20sample%20of%20X%20rows.html">10.0.8 Get random sample of X rows</a></li>
 </ul>
 </li>
 <li><strong>Get Specific rows by index</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.9%20filter%20to%20rows%20in%20a%20list%20of%20index%20values%2C%20such%20as%20a%20range.html">10.0.9 filter to rows in a list of index values, such as a range</a></li>
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.10%20filter%20using%20index%20position%20.html">10.0.10 filter using index position </a></li>
 </ul>
 </li>
 <li><strong>Custom Methods</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Combine%20Group%20and%20Sort/10.0.11%20Create%20and%20iteratively%20fill%20an%20empty%20DataFrame.html">10.0.11 Create and iteratively fill an empty DataFrame</a></li>
 </ul>
 </li>

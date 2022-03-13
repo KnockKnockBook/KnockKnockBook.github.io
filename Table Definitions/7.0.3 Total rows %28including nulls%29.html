@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,11 +203,18 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Get info about how a DataFrame is defined</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Table%20Definitions/7.0.0%20Get%20column%20names.html">7.0.0 Get column names</a></li>
 <li> <a href="/Table%20Definitions/7.0.1%20Get%20column%20datatypes.html">7.0.1 Get column datatypes</a></li>
 <li> <a href="/Table%20Definitions/7.0.2%20Total%20rows%20and%20columns.html">7.0.2 Total rows and columns</a></li>
@@ -225,7 +232,7 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Manage how columns appear</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Table%20Definitions/7.0.14%20Limit%20DataFrame%20to%20only%20specfic%20columns.html">7.0.14 Limit DataFrame to only specfic columns</a></li>
 <li> <a href="/Table%20Definitions/7.0.15%20Set%20the%20order%20of%20the%20columns.html">7.0.15 Set the order of the columns</a></li>
 <li> <a href="/Table%20Definitions/7.0.16%20Drop%20specific%20colums.html">7.0.16 Drop specific colums</a></li>
@@ -233,7 +240,7 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Manage Data Types of Columns</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Table%20Definitions/7.0.18%20Change%20column%20data%20type%20to%20float.html">7.0.18 Change column data type to float</a></li>
 <li> <a href="/Table%20Definitions/7.0.19%20Change%20column%20data%20type%20to%20int.html">7.0.19 Change column data type to int</a></li>
 <li> <a href="/Table%20Definitions/7.0.20%20Change%20column%20data%20type%20to%20string.html">7.0.20 Change column data type to string</a></li>

@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,16 +203,23 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Descriptive Summary</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Descriptive%20Stats/11.0.0%20Generate%20summary%20statistics.html">11.0.0 Generate summary statistics</a></li>
 </ul>
 </li>
 <li><strong>Numeric Statistics</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Descriptive%20Stats/11.0.1%20Sum.html">11.0.1 Sum</a></li>
 <li> <a href="/Descriptive%20Stats/11.0.2%20Count%20non-null%20values.html">11.0.2 Count non-null values</a></li>
 <li> <a href="/Descriptive%20Stats/11.0.3%20average%20or%20mean.html">11.0.3 average or mean</a></li>
@@ -225,7 +232,7 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Numeric Calculated Statistics</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Descriptive%20Stats/11.0.10%20Two%20Standard%20Deviations%20from%20the%20mean.html">11.0.10 Two Standard Deviations from the mean</a></li>
 <li> <a href="/Descriptive%20Stats/11.0.11%20Z-Score.html">11.0.11 Z-Score</a></li>
 </ul>

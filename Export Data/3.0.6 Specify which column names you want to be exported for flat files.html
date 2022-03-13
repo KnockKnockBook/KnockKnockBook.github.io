@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,11 +203,18 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Export Data to a variety of formats</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Export%20Data/3.0.0%20Export%20to%20csv.html">3.0.0 Export to csv</a></li>
 <li> <a href="/Export%20Data/3.0.1%20Export%20to%20tab%20delimited%20text%20file.html">3.0.1 Export to tab delimited text file</a></li>
 <li> <a href="/Export%20Data/3.0.2%20Export%20to%20file%20with%20custom%20delimiter.html">3.0.2 Export to file with custom delimiter</a></li>
@@ -217,7 +224,7 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Custom Export Parameters</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Export%20Data/3.0.6%20Specify%20which%20column%20names%20you%20want%20to%20be%20exported%20for%20flat%20files.html">3.0.6 Specify which column names you want to be exported for flat files</a></li>
 </ul>
 </li>

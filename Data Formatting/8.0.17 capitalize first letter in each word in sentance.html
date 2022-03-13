@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,11 +203,18 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Extract Date Component from DateTime</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Data%20Formatting/8.0.0%20Extract%20Year%20from%20Date.html">8.0.0 Extract Year from Date</a></li>
 <li> <a href="/Data%20Formatting/8.0.1%20Extract%20Month%20Number%20from%20Date.html">8.0.1 Extract Month Number from Date</a></li>
 <li> <a href="/Data%20Formatting/8.0.2%20Extract%20Date%20of%20the%20month%20from%20Date.html">8.0.2 Extract Date of the month from Date</a></li>
@@ -219,19 +226,19 @@ function closeNav() {
 </ul>
 </li>
 <li><strong>Date Calculations and filters</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Data%20Formatting/8.0.8%20Filtering%20with%20Dates.html">8.0.8 Filtering with Dates</a></li>
 <li> <a href="/Data%20Formatting/8.0.9%20difference%20between%20two%20dates.html">8.0.9 difference between two dates</a></li>
 <li> <a href="/Data%20Formatting/8.0.10%20Create%20a%20Lagged%20Feature.html">8.0.10 Create a Lagged Feature</a></li>
 </ul>
 </li>
 <li><strong>Null Values</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Data%20Formatting/8.0.11%20deal%20with%20null%20values.html">8.0.11 deal with null values</a></li>
 </ul>
 </li>
 <li><strong>Text Processing functions</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/Data%20Formatting/8.0.12%20Apply%20a%20function%20to%20process%20text.html">8.0.12 Apply a function to process text</a></li>
 <li> <a href="/Data%20Formatting/8.0.13%20count%20total%20characters.html">8.0.13 count total characters</a></li>
 <li> <a href="/Data%20Formatting/8.0.14%20count%20total%20words.html">8.0.14 count total words</a></li>

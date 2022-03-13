@@ -119,7 +119,7 @@
       }
 
       .sidebar a:hover {
-        color: #f1f1f1;
+        color: #E74C3C;
       }
 
       .sidebar .closebtn {
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 450px) {
+      @media screen and (max-height: 400px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -203,41 +203,48 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
 <li><strong>Create a bat file</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.0%20Create%20a%20bat%20file%20to%20run%20a%20python%20file.html">13.0.0 Create a bat file to run a python file</a></li>
 </ul>
 </li>
 <li><strong>pause a bat file</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.1%20prevent%20a%20bat%20file%20from%20closing%20after%20the%20file%20is%20done%20running%20until%20you%20press%20a%20key.html">13.0.1 prevent a bat file from closing after the file is done running until you press a key</a></li>
 </ul>
 </li>
 <li><strong>Copy a file to a new location</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.2%20Copy%20a%20file%20to%20a%20new%20location.html">13.0.2 Copy a file to a new location</a></li>
 </ul>
 </li>
 <li><strong>Create a timestamp for the current date and time as a string that you can add to a file name</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.3%20Get%20the%20current%20date%20and%20time%20as%20a%20string.html">13.0.3 Get the current date and time as a string</a></li>
 </ul>
 </li>
 <li><strong>Logging and Monitoring</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.4%20Log%20when%20an%20action%20happens.html">13.0.4 Log when an action happens</a></li>
 </ul>
 </li>
 <li><strong>Runing files</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.5%20Run%20another%20python%20program%20from%20within%20your%20python%20program.html">13.0.5 Run another python program from within your python program</a></li>
 </ul>
 </li>
 <li><strong>Data Pipelines</strong>
-<ul>
+<ul class="no-bullets">
 <li> <a href="/useful%20snippets/13.0.6%20Calculate%20the%20amount%20of%20memory%20available.html">13.0.6 Calculate the amount of memory available</a></li>
 <li> <a href="/useful%20snippets/13.0.7%20Delete%20a%20dataframe%20from%20memory.html">13.0.7 Delete a dataframe from memory</a></li>
 <li> <a href="/useful%20snippets/13.0.8%20Calculate%20how%20much%20time%20it%20takes%20to%20do%20something.html">13.0.8 Calculate how much time it takes to do something</a></li>
