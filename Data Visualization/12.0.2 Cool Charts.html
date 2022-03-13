@@ -155,7 +155,7 @@
       }
       </style>
 </head></html></div>
-<title> 1-Home </title>
+<title> Data Visualization </title>
 
 <!-- Here's the header content -->
 <div class="container">
@@ -206,9 +206,11 @@ function closeNav() {
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 <ul>
-<li><strong>Hello World</strong>
+<li><strong>Basic Plots</strong>
 <ul>
-<li> <a href="/1-Home/1.0.0%20home%20page.html">1.0.0 home page</a></li>
+<li> <a href="/Data%20Visualization/12.0.0%20Bar%20Chart.html">12.0.0 Bar Chart</a></li>
+<li> <a href="/Data%20Visualization/12.0.1%20Histogram.html">12.0.1 Histogram</a></li>
+<li> <a href="/Data%20Visualization/12.0.2%20Cool%20Charts.html">12.0.2 Cool Charts</a></li>
 </ul>
 </li>
 </ul>
@@ -216,8 +218,12 @@ function closeNav() {
   <h1>Members</h1>
   <ul>
   
-    <li>Hello World</li>
+    <li>Basic Plots</li>
 
+    
+    <ul></ul>
+    
+    <ul></ul>
     
     <ul></ul>
     
@@ -231,10 +237,16 @@ function closeNav() {
 <!--
   <ul>
       
-      <li><a href="/1-Home/Hello%20World.html">Hello World</a>
+      <li><a href="/Data%20Visualization/Basic%20Plots.html">Basic Plots</a>
       
           <ul>
-      <li><a href="/1-Home/1.0.0%20home%20page.html">1.0.0 home page</a>
+      <li><a href="/Data%20Visualization/12.0.0%20Bar%20Chart.html">12.0.0 Bar Chart</a>
+      </li>
+      
+      <li><a href="/Data%20Visualization/12.0.1%20Histogram.html">12.0.1 Histogram</a>
+      </li>
+      
+      <li><a href="/Data%20Visualization/12.0.2%20Cool%20Charts.html">12.0.2 Cool Charts</a>
       </li>
       </ul>
       </li>
@@ -244,16 +256,26 @@ function closeNav() {
 <!--
 
   
-    <a href="/1-Home/1.0.0%20home%20page.html">1.0.0 home page </a>
+    <a href="/Data%20Visualization/12.0.0%20Bar%20Chart.html">12.0.0 Bar Chart </a>
+  
+    <a href="/Data%20Visualization/12.0.1%20Histogram.html">12.0.1 Histogram </a>
+  
+    <a href="/Data%20Visualization/12.0.2%20Cool%20Charts.html">12.0.2 Cool Charts </a>
   
 
 
   <ul>
       
-      <li>Hello World
+      <li>Basic Plots
       
           <ul>
-      <li>1.0.0 home page
+      <li>12.0.0 Bar Chart
+      </li>
+      
+      <li>12.0.1 Histogram
+      </li>
+      
+      <li>12.0.2 Cool Charts
       </li>
       </ul>
       </li>
@@ -267,18 +289,40 @@ function closeNav() {
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>1.0.0 home page</p></b></h1>
-<h3><b><p>Description:</p></b></h3>
-<p>Welcome to the <strong>Data Science Playbook</strong></p>
-<p>Hello Data Science World! This project is a collection of code snippets for doing data science.</p>
-<p>r words this site is dedicated to using machine learning to train models that train humans to learn about machine learning. 
-<strong>Why the project is useful</strong>
-Data science is better when you can grab code snippets from a recipe book. It makes every single data science byte extra tasty.
-<strong>How users can get started with the project</strong> - Feel free to grab snippets of code and use it.  Just remember, This code is available on an "AS IS" basis, without any warranties or conditions of any kind, either expressed or implied</p>
-<p>Where users can get help with your project - If you have ideas for improving this repository, send me an email at DataSciencePlaybook@gmail.com</p>
-<p>Who maintains and contributes to the project This code is available on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p>
+<h1 style="text-align: center;"><b><p>12.0.2 Cool Charts</p></b></h1>
+<h3><b></b></h3>
 <h3><b><p>Example:</p></b></h3>
-<div class="codehilite"><pre><span></span><code><span class="n">here</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">stuff</span> <span class="n">about</span> <span class="n">life</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">######################################################################################</span>
+<span class="c1"># Cumulative Percent Column and Bar Chart</span>
+<span class="c1"># Sort the data, create a 'cumulative_percent' on the sorted data, and create a 'rank' column for each columns</span>
+
+<span class="c1"># 1. Sort the base column</span>
+<span class="n">DF_Sorted</span> <span class="o">=</span> <span class="n">DF</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'column_name'</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># 2. Create the cumulative % Column</span>
+<span class="n">DF_Sorted</span><span class="p">[</span><span class="s1">'cumulative_percent'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="p">(</span> <span class="n">DF_Sorted</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">/</span> <span class="n">DF_Sorted</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="p">)</span>
+
+<span class="c1"># 3. Create an index like column 'rank' to use as a label for the x-axis so that your chart looks pretty</span>
+<span class="n">DF_Sorted</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'rank'</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">DF_Sorted</span><span class="p">[</span><span class="s1">'cumulative_percent'</span><span class="p">])))</span>
+
+<span class="c1"># 4. Create a Bar Chart Showing the Cumulative percent</span>
+<span class="n">DF_Sorted</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">'cumulative_percent'</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">'rank'</span><span class="p">)</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"my_label_name"</span><span class="p">)</span>
+
+<span class="c1">######################################################################################</span>
+<span class="c1">### Correlation Matrix</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Specify the columns to include in your correlation matrix</span>
+<span class="n">DF_base</span> <span class="o">=</span> <span class="n">DF</span><span class="p">[[</span><span class="s1">'column_name'</span><span class="p">,</span> <span class="s1">'column_two'</span><span class="p">,</span> <span class="s1">'column_three'</span> <span class="p">]]</span>
+
+<span class="c1"># use .corr() to create a correlation matrix dataframe</span>
+<span class="n">DF_corr_matrix</span> <span class="o">=</span> <span class="n">DF_base</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1"># Plot the correlation matrix</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sn</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">DF_corr_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <h3><b></b></h3>
 <h3><b></b></h3>

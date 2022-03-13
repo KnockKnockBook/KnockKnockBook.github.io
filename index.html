@@ -1,5 +1,5 @@
 
-<div id="main">
+<div id="main" style="margin-left: 400px;">
 <!DOCTYPE html>
 
 <html lang="en">
@@ -98,7 +98,7 @@
 
       .sidebar {
         height: 100%;
-        width: 225px;
+        width: 400px;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -113,7 +113,7 @@
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 15px;
-        color: #818181;
+        color: #040302;
         display: block;
         transition: 0.3s;
       }
@@ -166,15 +166,18 @@
         -->
 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
 <li><a href="/1-Home.html" style="text-decoration:none">   1-Home   </a></li> <!--&nbsp; is a space -->
-<li><a href="/2-Import-Export.html" style="text-decoration:none">   2-Import-Export   </a></li> <!--&nbsp; is a space -->
-<li><a href="/3-Data-Processing.html" style="text-decoration:none">   3-Data-Processing   </a></li> <!--&nbsp; is a space -->
-<li><a href="/4-Formatting.html" style="text-decoration:none">   4-Formatting   </a></li> <!--&nbsp; is a space -->
-<li><a href="/5-Databases.html" style="text-decoration:none">   5-Databases   </a></li> <!--&nbsp; is a space -->
-<li><a href="/6-Descriptive-Statistics.html" style="text-decoration:none">   6-Descriptive-Statistics   </a></li> <!--&nbsp; is a space -->
-<li><a href="/7-Data-Visualization.html" style="text-decoration:none">   7-Data-Visualization   </a></li> <!--&nbsp; is a space -->
-<li><a href="/8-Text-Processing.html" style="text-decoration:none">   8-Text-Processing   </a></li> <!--&nbsp; is a space -->
-<li><a href="/9-Useful-Snippets.html" style="text-decoration:none">   9-Useful-Snippets   </a></li> <!--&nbsp; is a space -->
-<li><a href="/10-Datasets.html" style="text-decoration:none">   10-Datasets   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Import%20Data.html" style="text-decoration:none">   Import Data   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Export%20Data.html" style="text-decoration:none">   Export Data   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Python%20IO.html" style="text-decoration:none">   Python IO   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Databases.html" style="text-decoration:none">   Databases   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Data%20Connections.html" style="text-decoration:none">   Data Connections   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Table%20Definitions.html" style="text-decoration:none">   Table Definitions   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Data%20Formatting.html" style="text-decoration:none">   Data Formatting   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Conditional%20Logic.html" style="text-decoration:none">   Conditional Logic   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Combine%20Group%20and%20Sort.html" style="text-decoration:none">   Combine Group and Sort   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Descriptive%20Stats.html" style="text-decoration:none">   Descriptive Stats   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Data%20Visualization.html" style="text-decoration:none">   Data Visualization   </a></li> <!--&nbsp; is a space -->
+<li><a href="/useful%20snippets.html" style="text-decoration:none">   useful snippets   </a></li> <!--&nbsp; is a space -->
 <!--
             <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">Import/Export</a></li>
@@ -189,9 +192,10 @@
 <!-- Here's where the blog content will go -->
 <div class="container">
 <script>
+  //determines how far out the sidebar goes when opened;
 function openNav() {
-  document.getElementById("mySidebar").style.width = "225px";
-  //document.getElementById("main").style.marginLeft = "225px";
+  document.getElementById("mySidebar").style.width = "400px";
+  document.getElementById("main").style.marginLeft = "400px";
 }
 
 function closeNav() {
@@ -201,29 +205,51 @@ function closeNav() {
 </script>
 <div class="sidebar" id="mySidebar">
 <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-<a href="/1-Home/1.1-ReadME.md.html">1.1-ReadME.md </a>
+<ul>
+</ul>
+<!--
+  <h1>Members</h1>
+  <ul>
+  
+  </ul>
+
+
+
+
+<!--
+  <ul>
+      
+  </ul>
+ -->
+<!--
+
+  
+    <a href="/1-Home/1.0.0%20home%20page.html">1.0.0 home page </a>
+  
+
+
+  <ul>
+      
+  </ul>
+
+
+ -->
 </div>
 <div id="main">
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>1.1 ReadME</p></b></h1>
+<h1 style="text-align: center;"><b><p>1.0.0 home page</p></b></h1>
 <h3><b><p>Description:</p></b></h3>
-<h1>Welcome to the <strong>Data Science Playbook</strong></h1>
-<p><strong>What the project does</strong>
-- Hello Data Science World!  This project is a collection of code snippets for doing data science.</p>
-<ul>
-<li>In other words this site is dedicated to using machine learning to train models that train humans to learn about machine learning.
-<strong>Why the project is useful</strong></li>
-<li>Data science is easier when you can grab code snippets from a recipe book.  It makes every single data science byte extra tasty.</li>
-</ul>
-<p><strong>How users can get started with the project</strong>
-- Feel free to grab snippets of code and use it.  </p>
-<p><strong>Where users can get help with your project</strong>
-- If you have ideas for improving this repository, send me an email at DataSciencePlaybook@gmail.com</p>
-<p><strong>Who maintains and contributes to the project</strong>
-This code is available on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p>
-<h3><b></b></h3>
+<p>Welcome to the <strong>Data Science Playbook</strong></p>
+<p>Hello Data Science World! This project is a collection of code snippets for doing data science.</p>
+<p>r words this site is dedicated to using machine learning to train models that train humans to learn about machine learning. 
+<strong>Why the project is useful</strong>
+Data science is better when you can grab code snippets from a recipe book. It makes every single data science byte extra tasty.
+<strong>How users can get started with the project</strong> - Feel free to grab snippets of code and use it.  Just remember, This code is available on an "AS IS" basis, without any warranties or conditions of any kind, either expressed or implied</p>
+<p>Where users can get help with your project - If you have ideas for improving this repository, send me an email at DataSciencePlaybook@gmail.com</p>
+<p>Who maintains and contributes to the project This code is available on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p>
+<h3><b><p>Example:</p></b></h3>
 <table border="10" class="dataframe">
 <thead>
 <tr style="text-align: center;">
@@ -234,95 +260,523 @@ This code is available on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF 
 <tbody>
 <tr>
 <td>1-Home</td>
-<td>1.1 ReadME</td>
+<td>1.0.0 home page</td>
 </tr>
 <tr>
-<td>2-Import-Export</td>
-<td>2.1 Import Data</td>
+<td>Import Data</td>
+<td>2.0.0 Import from csv</td>
 </tr>
 <tr>
-<td>2-Import-Export</td>
-<td>2.2 Export Data</td>
+<td>Import Data</td>
+<td>2.0.1 Import from tab delimited text file</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.1 Get Column Info</td>
+<td>Import Data</td>
+<td>2.0.2 Import from file with custom delimiter</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.2 Manage Column Names</td>
+<td>Import Data</td>
+<td>2.0.3 Import from Excel file</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.3 Conditional Logic Examples</td>
+<td>Import Data</td>
+<td>2.0.4 Import from pickle</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.4 Create Columns with Conditional Logic</td>
+<td>Import Data</td>
+<td>2.0.5 Import from Google Sheet</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.5 Find and Replace</td>
+<td>Import Data</td>
+<td>2.0.6 Import from SQL database</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.61 Sort a Dataframe</td>
+<td>Import Data</td>
+<td>2.0.7 Import limited set of columns from text file</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.62  Create a Rank Column</td>
+<td>Import Data</td>
+<td>2.0.8 Specify data types of imported data from text file</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.7 Count Rows</td>
+<td>Import Data</td>
+<td>2.0.9 Specify data types of imported data from Excel</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.8 Group By and SQL in Python</td>
+<td>Import Data</td>
+<td>2.0.10 Import limited set of columns from Excel</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.91 Combine Data Join Merge Stack and Append</td>
+<td>Export Data</td>
+<td>3.0.0 Export to csv</td>
 </tr>
 <tr>
-<td>3-Data-Processing</td>
-<td>3.92 Custom Methods</td>
+<td>Export Data</td>
+<td>3.0.1 Export to tab delimited text file</td>
 </tr>
 <tr>
-<td>4-Formatting</td>
-<td>4.1 Format Dates and Times</td>
+<td>Export Data</td>
+<td>3.0.2 Export to file with custom delimiter</td>
 </tr>
 <tr>
-<td>4-Formatting</td>
-<td>4.2 Date calculations and filters</td>
+<td>Export Data</td>
+<td>3.0.3 Export to Excel</td>
 </tr>
 <tr>
-<td>4-Formatting</td>
-<td>4.3 Data Types</td>
+<td>Export Data</td>
+<td>3.0.4 Export to pickle</td>
 </tr>
 <tr>
-<td>5-Databases</td>
-<td>5.1 SQL Databases</td>
+<td>Export Data</td>
+<td>3.0.5 Export a dataframe to a database table</td>
 </tr>
 <tr>
-<td>6-Descriptive-Statistics</td>
-<td>6.1 Descriptive Statistics</td>
+<td>Export Data</td>
+<td>3.0.6 Specify which column names you want to be exported for flat files</td>
 </tr>
 <tr>
-<td>7-Data-Visualization</td>
-<td>7.1 Plotting</td>
+<td>Data Connections</td>
+<td>6.0.0 Construct a filepath</td>
 </tr>
 <tr>
-<td>8-Text-Processing</td>
-<td>8.1 Text Processing</td>
+<td>Data Connections</td>
+<td>6.0.1 Create a SQLite Connection</td>
 </tr>
 <tr>
-<td>9-Useful-Snippets</td>
-<td>9.2 Useful Snippets</td>
+<td>Python IO</td>
+<td>4.0.0 Create Empty Dataframe</td>
 </tr>
 <tr>
-<td>10-Datasets</td>
-<td>10.1 DataFrames</td>
+<td>Python IO</td>
+<td>4.0.1 Create Empty Dataframe with column names</td>
+</tr>
+<tr>
+<td>Python IO</td>
+<td>4.0.2 Create dataframe and add columns from lists</td>
+</tr>
+<tr>
+<td>Python IO</td>
+<td>4.0.3 convert a column to a list</td>
+</tr>
+<tr>
+<td>Python IO</td>
+<td>4.0.4 Export two columns to a python dictionary</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>5.0.0 Import a Password from a file stored outside your code</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>5.0.1 SQLiite Connection</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>5.0.2 Oracle Connection</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>5.0.3 SQL Server Connection Trusted Connection</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>5.0.4 Query a Database with SQL and create a DataFrame</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.0 Get column names</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.1 Get column datatypes</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.2 Total rows and columns</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.3 Total rows (including nulls)</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.4 Total columns</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.5 get column names, counts of values, datatypes, and memory usage</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.6 Count non-null instances in column</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.7 get number of rows that are NULL</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.8 Get summary of null values for all columns</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.9 Count unique or distinct values in a column</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.10 Gget percent of times each value occurs</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.11 count duplicate values and get sum of each value in column</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.12 Count of values where value = x in column</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.13 Count number of duplicate rows</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.14 Limit DataFrame to only specfic columns</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.15 Set the order of the columns</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.16 Drop specific colums</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.17 Change column names</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.18 Change column data type to float</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.19 Change column data type to int</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.20 Change column data type to string</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.21 Change column data type to datetime</td>
+</tr>
+<tr>
+<td>Table Definitions</td>
+<td>7.0.22 Reference - Date Format Symbols</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.0 Extract Year from Date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.1 Extract Month Number from Date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.2 Extract Date of the month from Date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.3 Extract Day of the Week Number from date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.4 Extract Date of the Week Name from date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.5 Extract Time from Date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.6 Extract Hour from Date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.7 Extract Minute from date</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.8 Filtering with Dates</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.9 difference between two dates</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.10 Create a Lagged Feature</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.11 deal with null values</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.12 Apply a function to process text</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.13 count total characters</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.14 count total words</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.15 count occurances of specific word</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.16 capitalize first letter in sentance</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.17 capitalize first letter in each word in sentance</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.18 convert to upper case</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.19 convert to lower case</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.20 Remove punctuation from text</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.21 strip front and back spaces</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.22 stem words in a string</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.23 return nth word in a string</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.24 Return Nth sentance in a string</td>
+</tr>
+<tr>
+<td>Data Formatting</td>
+<td>8.0.25 Return Substring between two words</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.0 Query a DataFrame with SQL</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.1 Where Column Equals Value</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.2 Where Column Does NOT Equal Value</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.3 Where Column IN List</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.4 Where Column NOT IN List</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.5 Where Column is Null</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.6 Where Column is Not Null</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.7 Where multiple conditions are all true (AND Logic)</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.8 Where one or more condition is true - (OR Logic)</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.9 CASE WHEN logic - Option 1 (pandas .loc)</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.10 CASE WHEN logic - Option 2 (np.where)</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.11 CASE WHEN logic - Option 3 (create and apply a custom function)</td>
+</tr>
+<tr>
+<td>Conditional Logic</td>
+<td>9.0.12 Create a rank column</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.0 JOIN or MERGE two dataframes</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.1 STACK and UNION DataFrames on top of each other</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.2 Append a new row to a DataFrame with a Dictionary</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.3 Append a new row to a DataFrame with a pd.Series</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.4 Use SQL to perform a Group By operation</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.5 Sort Ascending and descending</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.6 Get TOP x Rows</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.7 Get BOTTOM X Rows</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.8 Get random sample of X rows</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.9 filter to rows in a list of index values, such as a range</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.10 filter using index position</td>
+</tr>
+<tr>
+<td>Combine Group and Sort</td>
+<td>10.0.11 Create and iteratively fill an empty DataFrame</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.0 Generate summary statistics</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.1 Sum</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.2 Count non-null values</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.3 average or mean</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.4 median</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.5 mode</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.6 Standard Deviation</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.7 Min</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.8 Max</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.9 Quantiles</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.10 Two Standard Deviations from the mean</td>
+</tr>
+<tr>
+<td>Descriptive Stats</td>
+<td>11.0.11 Z-Score</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>12.0.0 Bar Chart</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>12.0.1 Histogram</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>12.0.2 Cool Charts</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.0 Create a bat file to run a python file</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.1 prevent a bat file from closing after the file is done running until you press a key</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.2 Copy a file to a new location</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.3 Get the current date and time as a string</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.4 Log when an action happens</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.5 Run another python program from within your python program</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.6 Calculate the amount of memory available</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.7 Delete a dataframe from memory</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.8 Calculate how much time it takes to do something</td>
+</tr>
+<tr>
+<td>useful snippets</td>
+<td>13.0.9 Use SQL to see how many rows are in a table</td>
 </tr>
 </tbody>
 </table>
