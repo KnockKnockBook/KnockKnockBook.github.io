@@ -98,7 +98,7 @@
 
       .sidebar {
         height: 100%;
-        width: 375px;
+        width: 300px;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -149,7 +149,7 @@
       }
 
       /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-      @media screen and (max-height: 375px) {
+      @media screen and (max-height: 300px) {
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
@@ -194,7 +194,7 @@
 <script>
   //determines how far out the sidebar goes when opened;
 function openNav() {
-  document.getElementById("mySidebar").style.width = "375px";
+  document.getElementById("mySidebar").style.width = "300px";
   document.getElementById("main").style.marginLeft = "375px";
 }
 
