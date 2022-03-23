@@ -296,13 +296,22 @@ ul.no-bullets {
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
 <!-- Here's where the blog content will go -->
-<h1 style="text-align: center;"><b><p>6.0.0 Construct a filepath</p></b></h1>
+<h1 style="text-align: center;"><b><p>6.0.1 Add a Date Stamp for a filepath</p></b></h1>
 <h3><b></b></h3>
 <h3><b><p>Example:</p></b></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Construct a filepath</span>
-<span class="n">filename</span>    <span class="o">=</span> <span class="s2">"data.csv"</span>
-<span class="n">import_path</span> <span class="o">=</span> <span class="s2">"/Path/to/your/"</span>
-<span class="n">import_filepath</span> <span class="o">=</span> <span class="n">import_path</span> <span class="o">+</span> <span class="n">filename</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Create file path stirng with a date stamp</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">export_path</span> <span class="o">=</span> <span class="o">//</span><span class="n">your</span><span class="o">//</span><span class="n">export</span><span class="o">//</span><span class="n">path</span><span class="o">//</span>
+<span class="n">export_filename</span> <span class="o">=</span> <span class="n">yourfilename</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="n">start_time_now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">rundate</span> <span class="o">=</span> <span class="n">start_time_now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y%m</span><span class="si">%d</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">run_date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">rundate</span><span class="p">)</span>
+<span class="n">export_file_format</span> <span class="o">=</span> <span class="s2">".txt"</span>
+<span class="n">export_file_path</span> <span class="o">=</span> <span class="n">export_path</span> <span class="o">+</span> <span class="n">export_filename</span> <span class="o">+</span> <span class="s2">"_"</span> <span class="o">+</span> <span class="n">run_date</span> <span class="o">+</span> <span class="n">export_file_format</span>
 </code></pre></div>
 <h3><b></b></h3>
 <h3><b></b></h3>
