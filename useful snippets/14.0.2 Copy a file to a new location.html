@@ -1,0 +1,516 @@
+
+<div id="main" style="margin-left: 450px;">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
+<!-- Required meta tags -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- Bootstrap CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"/>
+<!-- For highlighting your code blocks -->
+<style>
+      .codehilite .hll { background-color: #ffffcc }
+      .codehilite  { background: #f8f8f8; }
+      .codehilite .c { color: #408080; font-style: italic } /* Comment */
+      .codehilite .err { border: 1px solid #FF0000 } /* Error */
+      .codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+      .codehilite .o { color: #666666 } /* Operator */
+      .codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+      .codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+      .codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+      .codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+      .codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+      .codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+      .codehilite .gd { color: #A00000 } /* Generic.Deleted */
+      .codehilite .ge { font-style: italic } /* Generic.Emph */
+      .codehilite .gr { color: #FF0000 } /* Generic.Error */
+      .codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+      .codehilite .gi { color: #00A000 } /* Generic.Inserted */
+      .codehilite .go { color: #888888 } /* Generic.Output */
+      .codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+      .codehilite .gs { font-weight: bold } /* Generic.Strong */
+      .codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+      .codehilite .gt { color: #0044DD } /* Generic.Traceback */
+      .codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+      .codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+      .codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+      .codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+      .codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+      .codehilite .kt { color: #B00040 } /* Keyword.Type */
+      .codehilite .m { color: #666666 } /* Literal.Number */
+      .codehilite .s { color: #BA2121 } /* Literal.String */
+      .codehilite .na { color: #7D9029 } /* Name.Attribute */
+      .codehilite .nb { color: #008000 } /* Name.Builtin */
+      .codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+      .codehilite .no { color: #880000 } /* Name.Constant */
+      .codehilite .nd { color: #AA22FF } /* Name.Decorator */
+      .codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+      .codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+      .codehilite .nf { color: #0000FF } /* Name.Function */
+      .codehilite .nl { color: #A0A000 } /* Name.Label */
+      .codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+      .codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+      .codehilite .nv { color: #19177C } /* Name.Variable */
+      .codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+      .codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+      .codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+      .codehilite .mf { color: #666666 } /* Literal.Number.Float */
+      .codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+      .codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+      .codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+      .codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+      .codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+      .codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+      .codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+      .codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+      .codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+      .codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+      .codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+      .codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+      .codehilite .sx { color: #008000 } /* Literal.String.Other */
+      .codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+      .codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+      .codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+      .codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+      .codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+      .codehilite .vc { color: #19177C } /* Name.Variable.Class */
+      .codehilite .vg { color: #19177C } /* Name.Variable.Global */
+      .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+      .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+      .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
+
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      .sidebar {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #F8F8FF;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #040302;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: #E74C3C;
+      }
+
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color: #444;
+      }
+
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 300px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+      </style>
+</head></html></div>
+<title> useful snippets </title>
+
+<!-- Here's the header content -->
+<div class="container">
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+<!--   <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+           <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+        -->
+<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+<li><a href="/1-Home.html" style="text-decoration:none">   1-Home   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Import%20Data.html" style="text-decoration:none">   Import Data   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Export%20Data.html" style="text-decoration:none">   Export Data   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Python%20IO.html" style="text-decoration:none">   Python IO   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Databases.html" style="text-decoration:none">   Databases   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Data%20Connections.html" style="text-decoration:none">   Data Connections   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Table%20Definitions.html" style="text-decoration:none">   Table Definitions   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Table%20Modifications.html" style="text-decoration:none">   Table Modifications   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Data%20Formatting.html" style="text-decoration:none">   Data Formatting   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Conditional%20Logic.html" style="text-decoration:none">   Conditional Logic   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Combine%20Group%20and%20Sort.html" style="text-decoration:none">   Combine Group and Sort   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Descriptive%20Stats.html" style="text-decoration:none">   Descriptive Stats   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Data%20Visualization.html" style="text-decoration:none">   Data Visualization   </a></li> <!--&nbsp; is a space -->
+<li><a href="/useful%20snippets.html" style="text-decoration:none">   useful snippets   </a></li> <!--&nbsp; is a space -->
+<!--
+            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Import/Export</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Dates and Times</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Data Processing</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">SQL Databases</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Useful Snippets</a></li>
+            -->
+</ul>
+</header>
+</div>
+<!-- Here's where the blog content will go -->
+<div class="container">
+<script>
+  //determines how far out the sidebar goes when opened;
+function openNav() {
+  document.getElementById("mySidebar").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "375px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<div class="sidebar" id="mySidebar">
+<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+<ul>
+<li><strong>Create a bat file</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.0%20Create%20a%20bat%20file%20to%20run%20a%20python%20file.html">14.0.0 Create a bat file to run a python file</a></li>
+</ul>
+</li>
+<li><strong>pause a bat file</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.1%20prevent%20a%20bat%20file%20from%20closing%20after%20the%20file%20is%20done%20running%20until%20you%20press%20a%20key.html">14.0.1 prevent a bat file from closing after the file is done running until you press a key</a></li>
+</ul>
+</li>
+<li><strong>Copy a file to a new location</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.2%20Copy%20a%20file%20to%20a%20new%20location.html">14.0.2 Copy a file to a new location</a></li>
+</ul>
+</li>
+<li><strong>Create a timestamp for the current date and time as a string that you can add to a file name</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.3%20Get%20the%20current%20date%20and%20time%20as%20a%20string.html">14.0.3 Get the current date and time as a string</a></li>
+</ul>
+</li>
+<li><strong>Logging and Monitoring</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.4%20Log%20when%20an%20action%20happens.html">14.0.4 Log when an action happens</a></li>
+</ul>
+</li>
+<li><strong>Runing files</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.5%20Run%20another%20python%20program%20from%20within%20your%20python%20program.html">14.0.5 Run another python program from within your python program</a></li>
+</ul>
+</li>
+<li><strong>Data Pipelines</strong>
+<ul class="no-bullets">
+<li> <a href="/useful%20snippets/14.0.6%20Calculate%20the%20amount%20of%20memory%20available.html">14.0.6 Calculate the amount of memory available</a></li>
+<li> <a href="/useful%20snippets/14.0.7%20Delete%20a%20dataframe%20from%20memory.html">14.0.7 Delete a dataframe from memory</a></li>
+<li> <a href="/useful%20snippets/14.0.8%20Calculate%20how%20much%20time%20it%20takes%20to%20do%20something.html">14.0.8 Calculate how much time it takes to do something</a></li>
+<li> <a href="/useful%20snippets/14.0.9%20Use%20SQL%20to%20see%20how%20many%20rows%20are%20in%20a%20table.html">14.0.9 Use SQL to see how many rows are in a table</a></li>
+</ul>
+</li>
+</ul>
+<!--
+  <h1>Members</h1>
+  <ul>
+  
+    <li>Create a bat file</li>
+
+    
+    <ul></ul>
+    
+
+  
+    <li>pause a bat file</li>
+
+    
+    <ul></ul>
+    
+
+  
+    <li>Copy a file to a new location</li>
+
+    
+    <ul></ul>
+    
+
+  
+    <li>Create a timestamp for the current date and time as a string that you can add to a file name</li>
+
+    
+    <ul></ul>
+    
+
+  
+    <li>Logging and Monitoring</li>
+
+    
+    <ul></ul>
+    
+
+  
+    <li>Runing files</li>
+
+    
+    <ul></ul>
+    
+
+  
+    <li>Data Pipelines</li>
+
+    
+    <ul></ul>
+    
+    <ul></ul>
+    
+    <ul></ul>
+    
+    <ul></ul>
+    
+
+  
+  </ul>
+
+
+
+
+<!--
+  <ul>
+      
+      <li><a href="/useful%20snippets/Create%20a%20bat%20file.html">Create a bat file</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.0%20Create%20a%20bat%20file%20to%20run%20a%20python%20file.html">14.0.0 Create a bat file to run a python file</a>
+      </li>
+      </ul>
+      </li>
+      
+      <li><a href="/useful%20snippets/pause%20a%20bat%20file.html">pause a bat file</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.1%20prevent%20a%20bat%20file%20from%20closing%20after%20the%20file%20is%20done%20running%20until%20you%20press%20a%20key.html">14.0.1 prevent a bat file from closing after the file is done running until you press a key</a>
+      </li>
+      </ul>
+      </li>
+      
+      <li><a href="/useful%20snippets/Copy%20a%20file%20to%20a%20new%20location.html">Copy a file to a new location</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.2%20Copy%20a%20file%20to%20a%20new%20location.html">14.0.2 Copy a file to a new location</a>
+      </li>
+      </ul>
+      </li>
+      
+      <li><a href="/useful%20snippets/Create%20a%20timestamp%20for%20the%20current%20date%20and%20time%20as%20a%20string%20that%20you%20can%20add%20to%20a%20file%20name.html">Create a timestamp for the current date and time as a string that you can add to a file name</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.3%20Get%20the%20current%20date%20and%20time%20as%20a%20string.html">14.0.3 Get the current date and time as a string</a>
+      </li>
+      </ul>
+      </li>
+      
+      <li><a href="/useful%20snippets/Logging%20and%20Monitoring.html">Logging and Monitoring</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.4%20Log%20when%20an%20action%20happens.html">14.0.4 Log when an action happens</a>
+      </li>
+      </ul>
+      </li>
+      
+      <li><a href="/useful%20snippets/Runing%20files.html">Runing files</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.5%20Run%20another%20python%20program%20from%20within%20your%20python%20program.html">14.0.5 Run another python program from within your python program</a>
+      </li>
+      </ul>
+      </li>
+      
+      <li><a href="/useful%20snippets/Data%20Pipelines.html">Data Pipelines</a>
+      
+          <ul>
+      <li><a href="/useful%20snippets/14.0.6%20Calculate%20the%20amount%20of%20memory%20available.html">14.0.6 Calculate the amount of memory available</a>
+      </li>
+      
+      <li><a href="/useful%20snippets/14.0.7%20Delete%20a%20dataframe%20from%20memory.html">14.0.7 Delete a dataframe from memory</a>
+      </li>
+      
+      <li><a href="/useful%20snippets/14.0.8%20Calculate%20how%20much%20time%20it%20takes%20to%20do%20something.html">14.0.8 Calculate how much time it takes to do something</a>
+      </li>
+      
+      <li><a href="/useful%20snippets/14.0.9%20Use%20SQL%20to%20see%20how%20many%20rows%20are%20in%20a%20table.html">14.0.9 Use SQL to see how many rows are in a table</a>
+      </li>
+      </ul>
+      </li>
+      
+  </ul>
+ -->
+<!--
+
+  
+    <a href="/useful%20snippets/14.0.0%20Create%20a%20bat%20file%20to%20run%20a%20python%20file.html">14.0.0 Create a bat file to run a python file </a>
+  
+    <a href="/useful%20snippets/14.0.1%20prevent%20a%20bat%20file%20from%20closing%20after%20the%20file%20is%20done%20running%20until%20you%20press%20a%20key.html">14.0.1 prevent a bat file from closing after the file is done running until you press a key </a>
+  
+    <a href="/useful%20snippets/14.0.2%20Copy%20a%20file%20to%20a%20new%20location.html">14.0.2 Copy a file to a new location </a>
+  
+    <a href="/useful%20snippets/14.0.3%20Get%20the%20current%20date%20and%20time%20as%20a%20string.html">14.0.3 Get the current date and time as a string </a>
+  
+    <a href="/useful%20snippets/14.0.4%20Log%20when%20an%20action%20happens.html">14.0.4 Log when an action happens </a>
+  
+    <a href="/useful%20snippets/14.0.5%20Run%20another%20python%20program%20from%20within%20your%20python%20program.html">14.0.5 Run another python program from within your python program </a>
+  
+    <a href="/useful%20snippets/14.0.6%20Calculate%20the%20amount%20of%20memory%20available.html">14.0.6 Calculate the amount of memory available </a>
+  
+    <a href="/useful%20snippets/14.0.7%20Delete%20a%20dataframe%20from%20memory.html">14.0.7 Delete a dataframe from memory </a>
+  
+    <a href="/useful%20snippets/14.0.8%20Calculate%20how%20much%20time%20it%20takes%20to%20do%20something.html">14.0.8 Calculate how much time it takes to do something </a>
+  
+    <a href="/useful%20snippets/14.0.9%20Use%20SQL%20to%20see%20how%20many%20rows%20are%20in%20a%20table.html">14.0.9 Use SQL to see how many rows are in a table </a>
+  
+
+
+  <ul>
+      
+      <li>Create a bat file
+      
+          <ul>
+      <li>14.0.0 Create a bat file to run a python file
+      </li>
+      </ul>
+      </li>
+      
+      <li>pause a bat file
+      
+          <ul>
+      <li>14.0.1 prevent a bat file from closing after the file is done running until you press a key
+      </li>
+      </ul>
+      </li>
+      
+      <li>Copy a file to a new location
+      
+          <ul>
+      <li>14.0.2 Copy a file to a new location
+      </li>
+      </ul>
+      </li>
+      
+      <li>Create a timestamp for the current date and time as a string that you can add to a file name
+      
+          <ul>
+      <li>14.0.3 Get the current date and time as a string
+      </li>
+      </ul>
+      </li>
+      
+      <li>Logging and Monitoring
+      
+          <ul>
+      <li>14.0.4 Log when an action happens
+      </li>
+      </ul>
+      </li>
+      
+      <li>Runing files
+      
+          <ul>
+      <li>14.0.5 Run another python program from within your python program
+      </li>
+      </ul>
+      </li>
+      
+      <li>Data Pipelines
+      
+          <ul>
+      <li>14.0.6 Calculate the amount of memory available
+      </li>
+      
+      <li>14.0.7 Delete a dataframe from memory
+      </li>
+      
+      <li>14.0.8 Calculate how much time it takes to do something
+      </li>
+      
+      <li>14.0.9 Use SQL to see how many rows are in a table
+      </li>
+      </ul>
+      </li>
+      
+  </ul>
+
+
+ -->
+</div>
+<div id="main">
+<button class="openbtn" onclick="openNav()">☰</button>
+</div>
+<!-- Here's where the blog content will go -->
+<h1 style="text-align: center;"><b><p>14.0.2 Copy a file to a new location</p></b></h1>
+<h3><b><p>Description:</p></b></h3>
+<p>You may need to copy files from one location to another so that files saved by one application are accessable to another application that is running somewhere else.  Here is how to copy files between locations</p>
+<h3><b><p>Example:</p></b></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="n">import_filepath</span> <span class="o">=</span> <span class="s2">"C:</span><span class="se">\\</span><span class="s2">path</span><span class="se">\\</span><span class="s2">to</span><span class="se">\\</span><span class="s2">import_file.txt"</span>
+<span class="n">export_filepath</span> <span class="o">=</span> <span class="s2">"C:</span><span class="se">\\</span><span class="s2">path</span><span class="se">\\</span><span class="s2">to</span><span class="se">\\</span><span class="s2">export_file.txt"</span>
+
+<span class="n">copy_file</span> <span class="o">=</span> <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">import_filepath</span> <span class="p">,</span> <span class="n">export_filepath</span><span class="p">)</span>
+</code></pre></div>
+<h3><b></b></h3>
+<h3><b></b></h3>
+<!-- -->
+</div>
+
+
+<!-- Here's the footer -->
+<footer class="footer mt-auto py-3 bg-light">
+<div class="container">
+<span class="text-muted">Byte sized data science recipies. 100+ must try analytics techniques for your data science playbook</span>
+</div>
+</footer>
+<!-- Bootstrap Bundle with Popper -->
+<script crossorigin="anonymous" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+

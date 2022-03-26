@@ -172,6 +172,7 @@
 <li><a href="/Databases.html" style="text-decoration:none">   Databases   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Data%20Connections.html" style="text-decoration:none">   Data Connections   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Table%20Definitions.html" style="text-decoration:none">   Table Definitions   </a></li> <!--&nbsp; is a space -->
+<li><a href="/Table%20Modifications.html" style="text-decoration:none">   Table Modifications   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Data%20Formatting.html" style="text-decoration:none">   Data Formatting   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Conditional%20Logic.html" style="text-decoration:none">   Conditional Logic   </a></li> <!--&nbsp; is a space -->
 <li><a href="/Combine%20Group%20and%20Sort.html" style="text-decoration:none">   Combine Group and Sort   </a></li> <!--&nbsp; is a space -->
@@ -360,7 +361,7 @@ ul.no-bullets {
 <h3><b><p>Description:</p></b></h3>
 <p>The nice thing about a trusted connection is that you don't have to worry about storing or using your password in your code.</p>
 <h3><b><p>Example:</p></b></h3>
-<div class="codehilite"><pre><span></span><code> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">up</span> <span class="n">an</span> <span class="n">ODBC</span> <span class="n">Driver</span> <span class="n">on</span> <span class="n">your</span> <span class="n">computer</span> <span class="n">before</span> <span class="n">this</span> <span class="n">will</span> <span class="n">work</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># you may need to set up an ODBC Driver on your computer before this will work</span>
 <span class="n">SQL_Server_Engine</span> <span class="o">=</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">create_engine</span><span class="p">(</span><span class="s1">'mssql+pyodbc://your.server.address.org/database_name?driver=ODBC Driver 13 for SQL Server?Trusted_Connection=yes'</span><span class="p">)</span>
 </code></pre></div>
 <h3><b></b></h3>
