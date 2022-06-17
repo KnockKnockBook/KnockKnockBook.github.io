@@ -221,6 +221,7 @@
 <a href="/Data%20Exploration%20for%20ML.html" style="text-decoration:none">   Data Exploration for ML   </a>
 <a href="/Preprocessing.html" style="text-decoration:none">   Preprocessing   </a>
 <a href="/Pipelines.html" style="text-decoration:none">   Pipelines   </a>
+<a href="/Models.html" style="text-decoration:none">   Models   </a>
 </ul>
 </div>
 <div class="vertical-menu">
@@ -393,7 +394,11 @@ ul.no-bullets {
 <h1 style="text-align: center;"><b><p>1.0.6 Convert processed new data from numpy array to a DataFrame with names</p></b></h1>
 <h3><b></b></h3>
 <h3><b><p>Example:</p></b></h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Convert the numpy_array to a dataframe and add the column names:</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Get the transformed feature names:</span>
+<span class="n">transformed_feature_names</span> <span class="o">=</span> <span class="n">full_pipeline</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transformed_feature_names</span><span class="p">)</span>
+
+<span class="c1"># Convert the numpy_array to a dataframe and add the column names:</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">DF_transformed_new_data</span>
            <span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">transformed_feature_names</span><span class="p">)</span>
 </code></pre></div>

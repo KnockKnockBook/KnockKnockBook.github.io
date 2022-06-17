@@ -1,0 +1,605 @@
+
+<div id="main" style="margin-left: 450px;">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TF4WLJG0ZL"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TF4WLJG0ZL');
+    </script>
+<!-- Required meta tags -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- Bootstrap CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet"/>
+<!-- For highlighting your code blocks -->
+<style>
+      .codehilite .hll { background-color: #ffffcc }
+      .codehilite  { background: #f8f8f8; }
+      .codehilite .c { color: #408080; font-style: italic } /* Comment */
+      .codehilite .err { border: 1px solid #FF0000 } /* Error */
+      .codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+      .codehilite .o { color: #666666 } /* Operator */
+      .codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+      .codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+      .codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+      .codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+      .codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+      .codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+      .codehilite .gd { color: #A00000 } /* Generic.Deleted */
+      .codehilite .ge { font-style: italic } /* Generic.Emph */
+      .codehilite .gr { color: #FF0000 } /* Generic.Error */
+      .codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+      .codehilite .gi { color: #00A000 } /* Generic.Inserted */
+      .codehilite .go { color: #888888 } /* Generic.Output */
+      .codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+      .codehilite .gs { font-weight: bold } /* Generic.Strong */
+      .codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+      .codehilite .gt { color: #0044DD } /* Generic.Traceback */
+      .codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+      .codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+      .codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+      .codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+      .codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+      .codehilite .kt { color: #B00040 } /* Keyword.Type */
+      .codehilite .m { color: #666666 } /* Literal.Number */
+      .codehilite .s { color: #BA2121 } /* Literal.String */
+      .codehilite .na { color: #7D9029 } /* Name.Attribute */
+      .codehilite .nb { color: #008000 } /* Name.Builtin */
+      .codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+      .codehilite .no { color: #880000 } /* Name.Constant */
+      .codehilite .nd { color: #AA22FF } /* Name.Decorator */
+      .codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+      .codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+      .codehilite .nf { color: #0000FF } /* Name.Function */
+      .codehilite .nl { color: #A0A000 } /* Name.Label */
+      .codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+      .codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+      .codehilite .nv { color: #19177C } /* Name.Variable */
+      .codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+      .codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+      .codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+      .codehilite .mf { color: #666666 } /* Literal.Number.Float */
+      .codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+      .codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+      .codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+      .codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+      .codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+      .codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+      .codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+      .codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+      .codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+      .codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+      .codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+      .codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+      .codehilite .sx { color: #008000 } /* Literal.String.Other */
+      .codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+      .codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+      .codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+      .codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+      .codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+      .codehilite .vc { color: #19177C } /* Name.Variable.Class */
+      .codehilite .vg { color: #19177C } /* Name.Variable.Global */
+      .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+      .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+      .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+
+
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      .sidebar {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #F8F8FF;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #040302;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: #E74C3C;
+      }
+
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color: #444;
+      }
+
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 300px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+      </style>
+<style>
+      .vertical-menu {
+        width: 200px;
+      }
+
+      .vertical-menu a {
+        background-color: #eee;
+        color: black;
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+      }
+
+      .vertical-menu a:hover {
+        background-color: #ccc;
+      }
+
+      .vertical-menu a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+      </style>
+<title> Models </title>
+</head>
+<!-- Here's the header content -->
+<div class="container">
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+<div class="vertical-menu">
+<strong>General Info</strong>
+<ul class="no-bullets">
+<a href="/1-Home.html" style="text-decoration:none">   1-Home   </a>
+</ul>
+</div>
+<div class="vertical-menu">
+<strong>Import Export</strong>
+<ul class="no-bullets">
+<a href="/Import%20Data.html" style="text-decoration:none">   Import Data   </a>
+<a href="/Export%20Data.html" style="text-decoration:none">   Export Data   </a>
+<a href="/Data%20Connections.html" style="text-decoration:none">   Data Connections   </a>
+<a href="/Python%20to%20Dataframe.html" style="text-decoration:none">   Python to Dataframe   </a>
+<a href="/Databases.html" style="text-decoration:none">   Databases   </a>
+</ul>
+</div>
+<div class="vertical-menu">
+<strong>Data Processing</strong>
+<ul class="no-bullets">
+<a href="/Table%20Definitions.html" style="text-decoration:none">   Table Definitions   </a>
+<a href="/Table%20Modifications.html" style="text-decoration:none">   Table Modifications   </a>
+<a href="/Data%20Formatting.html" style="text-decoration:none">   Data Formatting   </a>
+<a href="/Conditional%20Logic.html" style="text-decoration:none">   Conditional Logic   </a>
+<a href="/Combine%20Group%20and%20Sort.html" style="text-decoration:none">   Combine Group and Sort   </a>
+<a href="/SQL%20DF.html" style="text-decoration:none">   SQL DF   </a>
+</ul>
+</div>
+<div class="vertical-menu">
+<strong>Analysis</strong>
+<ul class="no-bullets">
+<a href="/Descriptive%20Stats.html" style="text-decoration:none">   Descriptive Stats   </a>
+<a href="/Data%20Visualization.html" style="text-decoration:none">   Data Visualization   </a>
+</ul>
+</div>
+<div class="vertical-menu">
+<strong>Machine Learning</strong>
+<ul class="no-bullets">
+<a href="/Data%20Exploration%20for%20ML.html" style="text-decoration:none">   Data Exploration for ML   </a>
+<a href="/Preprocessing.html" style="text-decoration:none">   Preprocessing   </a>
+<a href="/Pipelines.html" style="text-decoration:none">   Pipelines   </a>
+<a href="/Models.html" style="text-decoration:none">   Models   </a>
+</ul>
+</div>
+<div class="vertical-menu">
+<strong>Useful Snippets</strong>
+<ul class="no-bullets">
+<a href="/useful%20snippets.html" style="text-decoration:none">   useful snippets   </a>
+</ul>
+</div>
+<!--
+            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Import/Export</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Dates and Times</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Data Processing</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">SQL Databases</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Useful Snippets</a></li>
+            -->
+</header>
+</div>
+<!-- Here's where the blog content will go -->
+<div class="container">
+<script>
+  //determines how far out the sidebar goes when opened;
+function openNav() {
+  document.getElementById("mySidebar").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "375px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<style>
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<div class="sidebar" id="mySidebar">
+<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+<ul>
+<li><strong>Models</strong>
+<ul class="no-bullets">
+<li> <a href="/Models/nan.0%20Full%20ML%20Example.html">nan.0 Full ML Example</a></li>
+</ul>
+</li>
+</ul>
+<!--
+  <h1>Members</h1>
+  <ul>
+  
+    <li>Models</li>
+
+    
+    <ul></ul>
+    
+
+  
+  </ul>
+
+
+
+
+<!--
+  <ul>
+      
+      <li><a href="/Models/Models.html">Models</a>
+      
+          <ul>
+      <li><a href="/Models/nan.0%20Full%20ML%20Example.html">nan.0 Full ML Example</a>
+      </li>
+      </ul>
+      </li>
+      
+  </ul>
+ -->
+<!--
+
+  
+    <a href="/Models/nan.0%20Full%20ML%20Example.html">nan.0 Full ML Example </a>
+  
+
+
+  <ul>
+      
+      <li>Models
+      
+          <ul>
+      <li>nan.0 Full ML Example
+      </li>
+      </ul>
+      </li>
+      
+  </ul>
+
+
+ -->
+</div>
+<div id="main">
+<button class="openbtn" onclick="openNav()">☰</button>
+</div>
+<!-- Here's where the blog content will go -->
+<h1 style="text-align: center;"><b><p>nan.0 Full ML Example</p></b></h1>
+<h3><b></b></h3>
+<h3><b><p>Example:</p></b></h3>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">"""</span>
+<span class="sd">Created on Tue Aug  3 23:07:32 2021</span>
+
+<span class="sd">@author: jonahbrown-joel</span>
+<span class="sd">"""</span>
+<span class="c1">### Baseline MULITI-Classification Models ###</span>
+
+<span class="c1"># 6.1 Create a 'pre_processing' pipeline that combines multiple mini-pipelines for </span>
+<span class="c1"># transforming groups of columns, such as categorical and numeric columns, seporately</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span>      <span class="kn">import</span> <span class="n">Pipeline</span>
+
+<span class="c1"># Use this to combine multiple pipelines</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span>       <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+
+<span class="c1"># data processing unctions </span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span>        <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Import the data </span>
+<span class="c1"># Import the Training data </span>
+<span class="c1"># train_path = "/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Data Science Project Template/project_data/training_data.csv"</span>
+<span class="c1"># DF_train = pd.read_csv(train_path)</span>
+
+
+<span class="c1"># Import the validation data and use it to train your model since you're using Cross Validation</span>
+<span class="n">train_path</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Data Science Project Template/project_data/validation_data.csv"</span>
+<span class="n">DF_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">train_path</span><span class="p">)</span>
+
+<span class="c1"># Specify the target variable</span>
+<span class="n">target_variable</span>       <span class="o">=</span> <span class="s1">'pclass'</span>
+
+<span class="c1"># create X and y datasets</span>
+<span class="n">DF_target</span> <span class="o">=</span> <span class="n">DF_train</span><span class="p">[</span><span class="n">target_variable</span><span class="p">]</span>
+<span class="n">DF_train</span> <span class="o">=</span> <span class="n">DF_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">DF_train</span><span class="o">.</span><span class="n">columns</span> <span class="o">!=</span> <span class="n">target_variable</span><span class="p">]</span> <span class="c1"># drop the target variable from your training data</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Create a pipeline to process the numeric data </span>
+
+<span class="c1"># Specify what variables to use in this mini-pipe</span>
+<span class="n">list_numeric_vars</span>     <span class="o">=</span> <span class="p">[</span> <span class="s1">'age'</span><span class="p">,</span> <span class="s1">'sibsp'</span><span class="p">,</span> <span class="s1">'fare'</span><span class="p">]</span>
+
+<span class="n">numeric_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">"my_imputer"</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">"mean"</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">"my_std_scaler"</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  
+    <span class="p">])</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Create a pipeline to process the categorical data</span>
+
+<span class="c1"># Specify what variables to use in this mini-pipe</span>
+<span class="n">list_categorical_vars</span> <span class="o">=</span> <span class="p">[</span> <span class="c1">#'name' , </span>
+                        <span class="s1">'sex'</span> 
+                         <span class="p">,</span> <span class="s1">'embarked'</span><span class="p">,</span> <span class="s1">'ticket'</span> <span class="p">,</span> <span class="s1">'cabin'</span> <span class="p">,</span> <span class="s1">'embarked'</span> <span class="p">,</span> <span class="s1">'home.dest'</span><span class="p">,</span> <span class="s1">'survived'</span>
+                        <span class="p">]</span>
+
+<span class="n">categorical_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">"impute_missing"</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="s1">'constant'</span><span class="p">)),</span>  <span class="c1"># missing values will be filled with "missing_value"</span>
+    <span class="p">(</span><span class="s2">"add_dummies"</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)),</span>   <span class="c1"># this ignores new values not seen in training</span>
+    <span class="p">])</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Create a preprocessing pipeline that combines the two mini-pipes</span>
+<span class="c1"># Combine the numeric_pipeline and categorical_pipeline with </span>
+<span class="n">preprocessing_pipeline</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+
+    <span class="c1"># The Numeric Pipeline</span>
+    <span class="p">(</span><span class="s2">"numeric_pipeline"</span>      <span class="c1"># the name of this mini-pipe  </span>
+     <span class="p">,</span> <span class="n">numeric_pipeline</span>      <span class="c1"># the pipeline from above</span>
+     <span class="p">,</span> <span class="n">list_numeric_vars</span><span class="p">),</span>    <span class="c1"># the DF to be used with this pipeline</span>
+
+    <span class="c1"># The Categorical Pipeline</span>
+    <span class="p">(</span><span class="s2">"categorical_pipeline"</span>  
+     <span class="p">,</span> <span class="n">categorical_pipeline</span>
+     <span class="p">,</span> <span class="n">list_categorical_vars</span><span class="p">),</span> 
+
+    <span class="p">])</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># 6.2 Use the preprocessor_pipe as the first step in a full pipeline generates predictions using a model</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span>   <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span>       <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span>            <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+
+<span class="c1"># Create Pipelines for 4 models:</span>
+<span class="c1"># 1. Linear Model</span>
+<span class="c1"># 2. Random Forest</span>
+<span class="c1"># 3. Support Vector Machine</span>
+<span class="c1"># 4. Neural Network</span>
+
+<span class="c1">###############################################################################</span>
+<span class="n">ML_Pipe_Base_Regression</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+                                      <span class="p">(</span><span class="s1">'preprocessor'</span><span class="p">,</span> <span class="n">preprocessing_pipeline</span><span class="p">),</span>  <span class="c1"># no "()" for the preprocessor</span>
+                                      <span class="p">(</span><span class="s1">'logistic_regression'</span><span class="p">,</span> <span class="n">LogisticRegression</span><span class="p">()</span> <span class="p">)</span>             <span class="c1"># the model does have a "()"</span>
+                                     <span class="p">]</span>
+                                 <span class="p">)</span>
+
+<span class="n">ML_Pipe_Base_RandomForest</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+                                      <span class="p">(</span><span class="s1">'preprocessor'</span><span class="p">,</span> <span class="n">preprocessing_pipeline</span><span class="p">),</span>  <span class="c1"># no "()" for the preprocessor</span>
+                                      <span class="p">(</span><span class="s1">'random_forest_classifier'</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">()</span> <span class="p">)</span>             <span class="c1"># the model does have a "()"</span>
+                                     <span class="p">]</span>
+                                 <span class="p">)</span>
+
+<span class="n">ML_Pipe_Base_SVM</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+                                      <span class="p">(</span><span class="s1">'preprocessor'</span><span class="p">,</span> <span class="n">preprocessing_pipeline</span><span class="p">),</span>  <span class="c1"># no "()" for the preprocessor</span>
+                                      <span class="p">(</span><span class="s1">'svc'</span><span class="p">,</span> <span class="n">SVC</span><span class="p">()</span> <span class="p">)</span>             <span class="c1"># the model does have a "()"</span>
+                                     <span class="p">]</span>
+                                 <span class="p">)</span>
+
+<span class="n">ML_Pipe_Base_NeuralNet</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+                                      <span class="p">(</span><span class="s1">'preprocessor'</span><span class="p">,</span> <span class="n">preprocessing_pipeline</span><span class="p">),</span>  <span class="c1"># no "()" for the preprocessor</span>
+                                      <span class="p">(</span><span class="s1">'neural_net_mlp_classifier'</span><span class="p">,</span> <span class="n">MLPClassifier</span><span class="p">()</span> <span class="p">)</span>             <span class="c1"># the model does have a "()"</span>
+                                     <span class="p">]</span>
+                                 <span class="p">)</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Fit the 4 mmodels using grid search cross validation</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="c1"># 'preprocessor__numeric_pipeline__my_imputer__strategy' : ['mean', 'median'], # see what imputation strategy works best</span>
+   <span class="c1"># 'preprocessor__categorical_pipeline__impute_missing__add_indicator' : ['True', 'False']  # see if it helps to add a missing indicator</span>
+             <span class="p">}</span>
+
+
+<span class="c1"># TODO - this supports one scoring metric currently, update to use multiple metrics</span>
+<span class="n">scoring_method</span> <span class="o">=</span> <span class="s1">'accuracy'</span>
+
+<span class="n">GridSearchCV_ML_Pipe_Base_Regression</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">ML_Pipe_Base_Regression</span>
+                           <span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span>
+                           <span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span>
+                           <span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scoring_method</span> <span class="p">)</span>
+
+<span class="n">GridSearchCV_ML_Pipe_Base_RandomForest</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">ML_Pipe_Base_RandomForest</span>
+                           <span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span>
+                           <span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span>
+                           <span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scoring_method</span> <span class="p">)</span>
+
+<span class="n">GridSearchCV_ML_Pipe_Base_SVM</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">ML_Pipe_Base_SVM</span>
+                           <span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span>
+                           <span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span>
+                           <span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scoring_method</span> <span class="p">)</span>
+
+<span class="n">GridSearchCV_ML_Pipe_Base_NeuralNet</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">ML_Pipe_Base_NeuralNet</span>
+                           <span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span>
+                           <span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span>
+                           <span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scoring_method</span> <span class="p">)</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Fit your models to the data</span>
+
+<span class="n">GridSearchCV_ML_Pipe_Base_Regression</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">DF_train</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DF_target</span><span class="p">)</span> 
+
+<span class="n">GridSearchCV_ML_Pipe_Base_RandomForest</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">DF_train</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DF_target</span><span class="p">)</span> 
+
+<span class="n">GridSearchCV_ML_Pipe_Base_SVM</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">DF_train</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DF_target</span><span class="p">)</span> 
+
+<span class="n">GridSearchCV_ML_Pipe_Base_NeuralNet</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">DF_train</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">DF_target</span><span class="p">)</span>
+
+<span class="c1">###############################################################################</span>
+
+<span class="c1"># Create an empty DF</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'GridSearchCV_ML_Pipe_Base_Regression'</span>
+<span class="n">df_grid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearchCV_ML_Pipe_Base_Regression</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'rank_test_score'</span><span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_name</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score'</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_plus_2_std'</span><span class="p">]</span>    <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_minus_2_std'</span><span class="p">]</span>   <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">DF_Empty</span> <span class="o">=</span> <span class="n">df_grid</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">##########################</span>
+
+
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'GridSearchCV_ML_Pipe_Base_Regression'</span>
+<span class="n">df_grid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearchCV_ML_Pipe_Base_Regression</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'rank_test_score'</span><span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_name</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score'</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_plus_2_std'</span><span class="p">]</span>    <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_minus_2_std'</span><span class="p">]</span>   <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">DF_Model_Scores</span> <span class="o">=</span> <span class="n">DF_Empty</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_grid</span><span class="p">)</span>
+
+
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'GridSearchCV_ML_Pipe_Base_RandomForest'</span>
+<span class="n">df_grid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearchCV_ML_Pipe_Base_RandomForest</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'rank_test_score'</span><span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_name</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score'</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_plus_2_std'</span><span class="p">]</span>    <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_minus_2_std'</span><span class="p">]</span>   <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">DF_Model_Scores</span> <span class="o">=</span> <span class="n">DF_Model_Scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_grid</span><span class="p">)</span>
+
+
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'GridSearchCV_ML_Pipe_Base_SVM'</span>
+<span class="n">df_grid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearchCV_ML_Pipe_Base_SVM</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'rank_test_score'</span><span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_name</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score'</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_plus_2_std'</span><span class="p">]</span>    <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_minus_2_std'</span><span class="p">]</span>   <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">DF_Model_Scores</span> <span class="o">=</span> <span class="n">DF_Model_Scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_grid</span><span class="p">)</span>
+
+
+<span class="n">model_name</span> <span class="o">=</span> <span class="s1">'GridSearchCV_ML_Pipe_Base_NeuralNet'</span>
+<span class="n">df_grid</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">GridSearchCV_ML_Pipe_Base_NeuralNet</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'rank_test_score'</span><span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_name</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score'</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_plus_2_std'</span><span class="p">]</span>    <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">df_grid</span><span class="p">[</span><span class="s1">'score_minus_2_std'</span><span class="p">]</span>   <span class="o">=</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'mean_test_score_abs'</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span> <span class="n">df_grid</span><span class="p">[</span><span class="s1">'std_test_score'</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">DF_Model_Scores</span> <span class="o">=</span> <span class="n">DF_Model_Scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_grid</span><span class="p">)</span>
+
+<span class="c1"># Sort the final df by the best scores</span>
+<span class="n">DF_Model_Scores</span> <span class="o">=</span> <span class="n">DF_Model_Scores</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'mean_test_score_abs'</span><span class="p">)</span>
+
+<span class="c1"># Save a report of the accuracy of your models</span>
+<span class="c1"># TODO consider </span>
+<span class="n">path_reports</span> <span class="o">=</span> <span class="s2">"/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Data Science Project Template/reports/"</span>
+<span class="n">file_name</span>   <span class="o">=</span> <span class="s2">"train_validation_MULTI_classification_scores.csv"</span>
+<span class="n">DF_Model_Scores</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_reports</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Save the best models from your grid search as your final 'Best' model</span>
+
+<span class="n">Best_ML_Pipe_Base_Regression</span>   <span class="o">=</span> <span class="n">GridSearchCV_ML_Pipe_Base_Regression</span><span class="o">.</span><span class="n">best_estimator_</span>
+
+<span class="n">Best_ML_Pipe_Base_RandomForest</span> <span class="o">=</span> <span class="n">GridSearchCV_ML_Pipe_Base_RandomForest</span><span class="o">.</span><span class="n">best_estimator_</span>
+
+<span class="n">Best_ML_Pipe_Base_SVM</span>          <span class="o">=</span> <span class="n">GridSearchCV_ML_Pipe_Base_SVM</span><span class="o">.</span><span class="n">best_estimator_</span>
+
+<span class="n">Best_ML_Pipe_Base_NeuralNet</span>    <span class="o">=</span> <span class="n">GridSearchCV_ML_Pipe_Base_NeuralNet</span><span class="o">.</span><span class="n">best_estimator_</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Pickle your best models</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="c1"># path to where you'll pickle your 'Candidate_Models'</span>
+<span class="n">path_candidate_models</span> <span class="o">=</span> <span class="s1">'/Users/jonahbrown-joel/Library/Mobile Documents/com~apple~CloudDocs/Data Science Cookbook/Data Science Project Template/candidate_models/candidate_multi_classification_models/'</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">'Best_ML_Pipe_Base_Regression.sav'</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">Best_ML_Pipe_Base_Regression</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_candidate_models</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">))</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">'Best_ML_Pipe_Base_RandomForest.sav'</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">Best_ML_Pipe_Base_RandomForest</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_candidate_models</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">))</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">'Best_ML_Pipe_Base_SVM.sav'</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">Best_ML_Pipe_Base_SVM</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_candidate_models</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">))</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">'Best_ML_Pipe_Base_NeuralNet.sav'</span>
+<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">Best_ML_Pipe_Base_NeuralNet</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_candidate_models</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">))</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1"># Reference:</span>
+
+<span class="c1"># load your pickled models </span>
+<span class="c1">#loaded_model = pickle.load(open(filename, 'rb'))</span>
+</code></pre></div>
+<h3><b></b></h3>
+<h3><b></b></h3>
+<!-- -->
+</div></html></div>
+
+
+<!-- Here's the footer -->
+<footer class="footer mt-auto py-3 bg-light">
+<div class="container">
+<span class="text-muted">Byte sized data science recipies. 100+ must try analytics techniques for your data science playbook</span>
+</div>
+</footer>
+<!-- Bootstrap Bundle with Popper -->
+<script crossorigin="anonymous" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
